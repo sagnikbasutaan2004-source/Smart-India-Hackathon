@@ -1,0 +1,572 @@
+{
+  "report_version": "1.1",
+  "field_summary": {
+    "mean_severity_index": 0.7419,
+    "severity_stddev": 0.0438,
+    "max_spread_risk": 0.7597,
+    "hotspot_counts": {
+      "NEUTRAL": 3,
+      "COLDSPOT_MODERATE": 2,
+      "HOTSPOT_MODERATE": 2,
+      "HOTSPOT_HIGH": 1,
+      "COLDSPOT_HIGH": 1
+    },
+    "classification_mode": "adaptive_relative_terciles_small_n",
+    "classification_note": "Absolute Getis-Ord Gi* z-thresholds (|z|>=0.9/1.65) not reached due to near-uniform field severity (low variance across n=9); adaptive relative-tercile ranking applied: top tercile = hotspots, bottom tercile = coldspots, extremes flagged HIGH.",
+    "network_edges_count": 27,
+    "gps_centers_available": true
+  },
+  "adjacency_graph": [
+    {
+      "from": "Z01",
+      "to": "Z02",
+      "distance_m": 36.52,
+      "weight": 0.0007
+    },
+    {
+      "from": "Z01",
+      "to": "Z04",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z01",
+      "to": "Z05",
+      "distance_m": 37.16,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z01",
+      "to": "Z07",
+      "distance_m": 13.76,
+      "weight": 0.0638
+    },
+    {
+      "from": "Z01",
+      "to": "Z08",
+      "distance_m": 39.03,
+      "weight": 0.0004
+    },
+    {
+      "from": "Z02",
+      "to": "Z03",
+      "distance_m": 36.59,
+      "weight": 0.0007
+    },
+    {
+      "from": "Z02",
+      "to": "Z04",
+      "distance_m": 37.16,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z02",
+      "to": "Z05",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z02",
+      "to": "Z06",
+      "distance_m": 37.23,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z02",
+      "to": "Z07",
+      "distance_m": 39.03,
+      "weight": 0.0004
+    },
+    {
+      "from": "Z02",
+      "to": "Z08",
+      "distance_m": 13.76,
+      "weight": 0.0638
+    },
+    {
+      "from": "Z02",
+      "to": "Z09",
+      "distance_m": 39.09,
+      "weight": 0.0004
+    },
+    {
+      "from": "Z03",
+      "to": "Z05",
+      "distance_m": 37.23,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z03",
+      "to": "Z06",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z03",
+      "to": "Z08",
+      "distance_m": 39.09,
+      "weight": 0.0004
+    },
+    {
+      "from": "Z03",
+      "to": "Z09",
+      "distance_m": 13.76,
+      "weight": 0.0638
+    },
+    {
+      "from": "Z04",
+      "to": "Z05",
+      "distance_m": 36.52,
+      "weight": 0.0007
+    },
+    {
+      "from": "Z04",
+      "to": "Z07",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z04",
+      "to": "Z08",
+      "distance_m": 37.16,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z05",
+      "to": "Z06",
+      "distance_m": 36.59,
+      "weight": 0.0007
+    },
+    {
+      "from": "Z05",
+      "to": "Z07",
+      "distance_m": 37.16,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z05",
+      "to": "Z08",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z05",
+      "to": "Z09",
+      "distance_m": 37.23,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z06",
+      "to": "Z08",
+      "distance_m": 37.23,
+      "weight": 0.0006
+    },
+    {
+      "from": "Z06",
+      "to": "Z09",
+      "distance_m": 6.88,
+      "weight": 0.2527
+    },
+    {
+      "from": "Z07",
+      "to": "Z08",
+      "distance_m": 36.52,
+      "weight": 0.0007
+    },
+    {
+      "from": "Z08",
+      "to": "Z09",
+      "distance_m": 36.59,
+      "weight": 0.0007
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "Z01",
+      "grid_position": {
+        "row": 0,
+        "col": 0
+      },
+      "gps_center": {
+        "lat": 22.41965232,
+        "lon": 82.04106316
+      },
+      "severity_index": 0.7684,
+      "getis_ord_gistar_z": -0.0451,
+      "hotspot_class": "NEUTRAL",
+      "spread_risk_index": 0.7365,
+      "neighbor_weighted_severity": 0.7153,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z04",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z07",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 39.03,
+          "weight": 0.0004
+        }
+      ]
+    },
+    {
+      "zone_id": "Z02",
+      "grid_position": {
+        "row": 0,
+        "col": 1
+      },
+      "gps_center": {
+        "lat": 22.41965232,
+        "lon": 82.04141847
+      },
+      "severity_index": 0.7804,
+      "getis_ord_gistar_z": 0.0057,
+      "hotspot_class": "NEUTRAL",
+      "spread_risk_index": 0.7593,
+      "neighbor_weighted_severity": 0.7453,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z05",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z03",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z01",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z04",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        }
+      ]
+    },
+    {
+      "zone_id": "Z03",
+      "grid_position": {
+        "row": 0,
+        "col": 2
+      },
+      "gps_center": {
+        "lat": 22.41965232,
+        "lon": 82.04177445
+      },
+      "severity_index": 0.77,
+      "getis_ord_gistar_z": -0.0635,
+      "hotspot_class": "COLDSPOT_MODERATE",
+      "spread_risk_index": 0.7307,
+      "neighbor_weighted_severity": 0.7044,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z06",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z09",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 37.23,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 39.09,
+          "weight": 0.0004
+        }
+      ]
+    },
+    {
+      "zone_id": "Z04",
+      "grid_position": {
+        "row": 1,
+        "col": 0
+      },
+      "gps_center": {
+        "lat": 22.41959046,
+        "lon": 82.04106316
+      },
+      "severity_index": 0.7311,
+      "getis_ord_gistar_z": -0.0649,
+      "hotspot_class": "COLDSPOT_MODERATE",
+      "spread_risk_index": 0.7185,
+      "neighbor_weighted_severity": 0.7102,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z07",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z01",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        }
+      ]
+    },
+    {
+      "zone_id": "Z05",
+      "grid_position": {
+        "row": 1,
+        "col": 1
+      },
+      "gps_center": {
+        "lat": 22.41959046,
+        "lon": 82.04141847
+      },
+      "severity_index": 0.7403,
+      "getis_ord_gistar_z": 0.0629,
+      "hotspot_class": "HOTSPOT_MODERATE",
+      "spread_risk_index": 0.7597,
+      "neighbor_weighted_severity": 0.7726,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z08",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z06",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z04",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z07",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        }
+      ]
+    },
+    {
+      "zone_id": "Z06",
+      "grid_position": {
+        "row": 1,
+        "col": 2
+      },
+      "gps_center": {
+        "lat": 22.41959046,
+        "lon": 82.04177445
+      },
+      "severity_index": 0.6832,
+      "getis_ord_gistar_z": 0.0746,
+      "hotspot_class": "HOTSPOT_HIGH",
+      "spread_risk_index": 0.7403,
+      "neighbor_weighted_severity": 0.7784,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z09",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z03",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 37.23,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 37.23,
+          "weight": 0.0006
+        }
+      ]
+    },
+    {
+      "zone_id": "Z07",
+      "grid_position": {
+        "row": 2,
+        "col": 0
+      },
+      "gps_center": {
+        "lat": 22.4195286,
+        "lon": 82.04106316
+      },
+      "severity_index": 0.6515,
+      "getis_ord_gistar_z": -0.0054,
+      "hotspot_class": "NEUTRAL",
+      "spread_risk_index": 0.7038,
+      "neighbor_weighted_severity": 0.7387,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z04",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z01",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 39.03,
+          "weight": 0.0004
+        }
+      ]
+    },
+    {
+      "zone_id": "Z08",
+      "grid_position": {
+        "row": 2,
+        "col": 1
+      },
+      "gps_center": {
+        "lat": 22.4195286,
+        "lon": 82.04141847
+      },
+      "severity_index": 0.7653,
+      "getis_ord_gistar_z": 0.0107,
+      "hotspot_class": "HOTSPOT_MODERATE",
+      "spread_risk_index": 0.755,
+      "neighbor_weighted_severity": 0.7482,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z05",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z09",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z07",
+          "dist_m": 36.52,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z04",
+          "dist_m": 37.16,
+          "weight": 0.0006
+        }
+      ]
+    },
+    {
+      "zone_id": "Z09",
+      "grid_position": {
+        "row": 2,
+        "col": 2
+      },
+      "gps_center": {
+        "lat": 22.4195286,
+        "lon": 82.04177445
+      },
+      "severity_index": 0.7869,
+      "getis_ord_gistar_z": -0.0693,
+      "hotspot_class": "COLDSPOT_HIGH",
+      "spread_risk_index": 0.7354,
+      "neighbor_weighted_severity": 0.701,
+      "top_adjacent_zones": [
+        {
+          "zone": "Z06",
+          "dist_m": 6.88,
+          "weight": 0.2527
+        },
+        {
+          "zone": "Z03",
+          "dist_m": 13.76,
+          "weight": 0.0638
+        },
+        {
+          "zone": "Z08",
+          "dist_m": 36.59,
+          "weight": 0.0007
+        },
+        {
+          "zone": "Z05",
+          "dist_m": 37.23,
+          "weight": 0.0006
+        },
+        {
+          "zone": "Z02",
+          "dist_m": 39.09,
+          "weight": 0.0004
+        }
+      ]
+    }
+  ]
+}
