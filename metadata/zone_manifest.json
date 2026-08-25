@@ -1,0 +1,394 @@
+{
+  "manifest_version": "1.0",
+  "orthomosaic": {
+    "file": "./field_twin_grid.jpg",
+    "dimensions_px": {
+      "width": 1600,
+      "height": 1200
+    },
+    "gps_bounds": {
+      "lat_min": 22.41949766666667,
+      "lat_max": 22.419683250000002,
+      "lon_min": 82.04088583333333,
+      "lon_max": 82.04195244444445,
+      "lat_center": 22.419590458333335,
+      "lon_center": 82.0414191388889,
+      "avg_flight_height_m": 40.0,
+      "source_image_count": 8
+    },
+    "grid_layout": {
+      "rows": 3,
+      "cols": 3
+    }
+  },
+  "source_images": [
+    {
+      "filename": "DJI_0006-h30.JPG",
+      "gps": {
+        "lat": 22.41949766666667,
+        "lon": 82.04195244444445
+      },
+      "flight_height_m": 30,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0006-h30.JPG",
+      "gps": {
+        "lat": 22.41949766666667,
+        "lon": 82.04195244444445
+      },
+      "flight_height_m": 30,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0009-h40.JPG",
+      "gps": {
+        "lat": 22.419683250000002,
+        "lon": 82.0416178611111
+      },
+      "flight_height_m": 40,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0009-h40.JPG",
+      "gps": {
+        "lat": 22.419683250000002,
+        "lon": 82.0416178611111
+      },
+      "flight_height_m": 40,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0010-h40.JPG",
+      "gps": {
+        "lat": 22.41966536111111,
+        "lon": 82.04125397222222
+      },
+      "flight_height_m": 40,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0010-h40.JPG",
+      "gps": {
+        "lat": 22.41966536111111,
+        "lon": 82.04125397222222
+      },
+      "flight_height_m": 40,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0012-h50.JPG",
+      "gps": {
+        "lat": 22.419651583333334,
+        "lon": 82.04088583333333
+      },
+      "flight_height_m": 50,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    },
+    {
+      "filename": "DJI_0012-h50.JPG",
+      "gps": {
+        "lat": 22.419651583333334,
+        "lon": 82.04088583333333
+      },
+      "flight_height_m": 50,
+      "original_size": {
+        "width_px": 5472,
+        "height_px": 3648
+      }
+    }
+  ],
+  "micro_zones": [
+    {
+      "zone_id": "Z01",
+      "grid_position": {
+        "row": 0,
+        "col": 0
+      },
+      "pixel_bbox": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 533,
+        "y2": 400,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41968325,
+          "lon": 82.04088583
+        },
+        "southeast": {
+          "lat": 22.41962139,
+          "lon": 82.04124115
+        },
+        "center": {
+          "lat": 22.41965232,
+          "lon": 82.04106316
+        }
+      },
+      "crop_image": "./micro_zones/Z01.jpg"
+    },
+    {
+      "zone_id": "Z02",
+      "grid_position": {
+        "row": 0,
+        "col": 1
+      },
+      "pixel_bbox": {
+        "x1": 533,
+        "y1": 0,
+        "x2": 1066,
+        "y2": 400,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41968325,
+          "lon": 82.04124115
+        },
+        "southeast": {
+          "lat": 22.41962139,
+          "lon": 82.04159646
+        },
+        "center": {
+          "lat": 22.41965232,
+          "lon": 82.04141847
+        }
+      },
+      "crop_image": "./micro_zones/Z02.jpg"
+    },
+    {
+      "zone_id": "Z03",
+      "grid_position": {
+        "row": 0,
+        "col": 2
+      },
+      "pixel_bbox": {
+        "x1": 1066,
+        "y1": 0,
+        "x2": 1600,
+        "y2": 400,
+        "width_px": 534,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41968325,
+          "lon": 82.04159646
+        },
+        "southeast": {
+          "lat": 22.41962139,
+          "lon": 82.04195244
+        },
+        "center": {
+          "lat": 22.41965232,
+          "lon": 82.04177445
+        }
+      },
+      "crop_image": "./micro_zones/Z03.jpg"
+    },
+    {
+      "zone_id": "Z04",
+      "grid_position": {
+        "row": 1,
+        "col": 0
+      },
+      "pixel_bbox": {
+        "x1": 0,
+        "y1": 400,
+        "x2": 533,
+        "y2": 800,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41962139,
+          "lon": 82.04088583
+        },
+        "southeast": {
+          "lat": 22.41955953,
+          "lon": 82.04124115
+        },
+        "center": {
+          "lat": 22.41959046,
+          "lon": 82.04106316
+        }
+      },
+      "crop_image": "./micro_zones/Z04.jpg"
+    },
+    {
+      "zone_id": "Z05",
+      "grid_position": {
+        "row": 1,
+        "col": 1
+      },
+      "pixel_bbox": {
+        "x1": 533,
+        "y1": 400,
+        "x2": 1066,
+        "y2": 800,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41962139,
+          "lon": 82.04124115
+        },
+        "southeast": {
+          "lat": 22.41955953,
+          "lon": 82.04159646
+        },
+        "center": {
+          "lat": 22.41959046,
+          "lon": 82.04141847
+        }
+      },
+      "crop_image": "./micro_zones/Z05.jpg"
+    },
+    {
+      "zone_id": "Z06",
+      "grid_position": {
+        "row": 1,
+        "col": 2
+      },
+      "pixel_bbox": {
+        "x1": 1066,
+        "y1": 400,
+        "x2": 1600,
+        "y2": 800,
+        "width_px": 534,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41962139,
+          "lon": 82.04159646
+        },
+        "southeast": {
+          "lat": 22.41955953,
+          "lon": 82.04195244
+        },
+        "center": {
+          "lat": 22.41959046,
+          "lon": 82.04177445
+        }
+      },
+      "crop_image": "./micro_zones/Z06.jpg"
+    },
+    {
+      "zone_id": "Z07",
+      "grid_position": {
+        "row": 2,
+        "col": 0
+      },
+      "pixel_bbox": {
+        "x1": 0,
+        "y1": 800,
+        "x2": 533,
+        "y2": 1200,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41955953,
+          "lon": 82.04088583
+        },
+        "southeast": {
+          "lat": 22.41949767,
+          "lon": 82.04124115
+        },
+        "center": {
+          "lat": 22.4195286,
+          "lon": 82.04106316
+        }
+      },
+      "crop_image": "./micro_zones/Z07.jpg"
+    },
+    {
+      "zone_id": "Z08",
+      "grid_position": {
+        "row": 2,
+        "col": 1
+      },
+      "pixel_bbox": {
+        "x1": 533,
+        "y1": 800,
+        "x2": 1066,
+        "y2": 1200,
+        "width_px": 533,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41955953,
+          "lon": 82.04124115
+        },
+        "southeast": {
+          "lat": 22.41949767,
+          "lon": 82.04159646
+        },
+        "center": {
+          "lat": 22.4195286,
+          "lon": 82.04141847
+        }
+      },
+      "crop_image": "./micro_zones/Z08.jpg"
+    },
+    {
+      "zone_id": "Z09",
+      "grid_position": {
+        "row": 2,
+        "col": 2
+      },
+      "pixel_bbox": {
+        "x1": 1066,
+        "y1": 800,
+        "x2": 1600,
+        "y2": 1200,
+        "width_px": 534,
+        "height_px": 400
+      },
+      "gps_bounds": {
+        "northwest": {
+          "lat": 22.41955953,
+          "lon": 82.04159646
+        },
+        "southeast": {
+          "lat": 22.41949767,
+          "lon": 82.04195244
+        },
+        "center": {
+          "lat": 22.4195286,
+          "lon": 82.04177445
+        }
+      },
+      "crop_image": "./micro_zones/Z09.jpg"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Byte-compiled / Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Large raw dataset directory (950MB+) - generated twin artifacts are tracked in repo
+Kaggle image/
+
+# System / logs
+*.log
+verify_log.txt
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

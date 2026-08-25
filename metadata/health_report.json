@@ -1,0 +1,246 @@
+{
+  "report_version": "1.0",
+  "field_summary": {
+    "zone_count": 9,
+    "mean_field_score": 0.5532,
+    "min_field_score": 0.5051,
+    "max_field_score": 0.6046,
+    "mean_stress_pct": 70.04,
+    "mean_vegetation_pct": 77.55,
+    "severity_distribution": {
+      "MILD_STRESS": 1,
+      "MODERATE_STRESS": 8
+    },
+    "gps_center": {
+      "lat": 22.419590458333335,
+      "lon": 82.0414191388889
+    }
+  },
+  "zones": [
+    {
+      "zone_id": "Z01",
+      "grid_position": {
+        "row": 0,
+        "col": 0
+      },
+      "health": {
+        "composite_score": 0.6046,
+        "score_p5": 0.5016,
+        "score_p95": 0.6786,
+        "severity_label": "MILD_STRESS",
+        "stress_pixels_pct": 36.67,
+        "vegetation_pixels_pct": 95.66,
+        "color_bgr": [
+          43,
+          219,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z01_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z01_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z01_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z02",
+      "grid_position": {
+        "row": 0,
+        "col": 1
+      },
+      "health": {
+        "composite_score": 0.5416,
+        "score_p5": 0.4905,
+        "score_p95": 0.6377,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 80.76,
+        "vegetation_pixels_pct": 81.71,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z02_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z02_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z02_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z03",
+      "grid_position": {
+        "row": 0,
+        "col": 2
+      },
+      "health": {
+        "composite_score": 0.5428,
+        "score_p5": 0.4893,
+        "score_p95": 0.6213,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 81.76,
+        "vegetation_pixels_pct": 86.03,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z03_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z03_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z03_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z04",
+      "grid_position": {
+        "row": 1,
+        "col": 0
+      },
+      "health": {
+        "composite_score": 0.5969,
+        "score_p5": 0.4988,
+        "score_p95": 0.6713,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 41.43,
+        "vegetation_pixels_pct": 94.37,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z04_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z04_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z04_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z05",
+      "grid_position": {
+        "row": 1,
+        "col": 1
+      },
+      "health": {
+        "composite_score": 0.5133,
+        "score_p5": 0.4862,
+        "score_p95": 0.6236,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 93.42,
+        "vegetation_pixels_pct": 55.01,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z05_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z05_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z05_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z06",
+      "grid_position": {
+        "row": 1,
+        "col": 2
+      },
+      "health": {
+        "composite_score": 0.5051,
+        "score_p5": 0.4855,
+        "score_p95": 0.5318,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 99.31,
+        "vegetation_pixels_pct": 60.09,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z06_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z06_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z06_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z07",
+      "grid_position": {
+        "row": 2,
+        "col": 0
+      },
+      "health": {
+        "composite_score": 0.5956,
+        "score_p5": 0.499,
+        "score_p95": 0.6676,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 41.99,
+        "vegetation_pixels_pct": 94.08,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z07_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z07_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z07_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z08",
+      "grid_position": {
+        "row": 2,
+        "col": 1
+      },
+      "health": {
+        "composite_score": 0.5277,
+        "score_p5": 0.485,
+        "score_p95": 0.6384,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 85.03,
+        "vegetation_pixels_pct": 58.73,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z08_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z08_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z08_composite_raw.jpg"
+      }
+    },
+    {
+      "zone_id": "Z09",
+      "grid_position": {
+        "row": 2,
+        "col": 2
+      },
+      "health": {
+        "composite_score": 0.5516,
+        "score_p5": 0.4875,
+        "score_p95": 0.6569,
+        "severity_label": "MODERATE_STRESS",
+        "stress_pixels_pct": 69.95,
+        "vegetation_pixels_pct": 72.23,
+        "color_bgr": [
+          32,
+          128,
+          255
+        ]
+      },
+      "files": {
+        "heatmap": "./health_heatmaps\\Z09_heatmap.jpg",
+        "overlay": "./health_heatmaps\\Z09_overlay.jpg",
+        "composite_raw": "./health_heatmaps\\Z09_composite_raw.jpg"
+      }
+    }
+  ]
+}

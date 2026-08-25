@@ -1,0 +1,2065 @@
+{
+  "report_version": "1.0",
+  "field_summary": {
+    "total_zones": 9,
+    "total_detections": 122,
+    "class_counts": {
+      "General_Lesion": 43,
+      "LeafSpot_Brown": 58,
+      "Chlorosis_Yellow": 21
+    },
+    "severity_counts": {
+      "HIGH": 9
+    },
+    "mean_zone_coverage_pct": 26.907,
+    "max_zone_coverage_pct": 38.488
+  },
+  "zones": [
+    {
+      "zone_id": "Z01",
+      "grid_position": {
+        "row": 0,
+        "col": 0
+      },
+      "detection_count": 18,
+      "class_distribution": {
+        "General_Lesion": 10,
+        "LeafSpot_Brown": 7,
+        "Chlorosis_Yellow": 1
+      },
+      "total_anomaly_area_px": 52141,
+      "zone_coverage_pct": 24.456,
+      "max_confidence": 0.5967,
+      "mean_confidence": 0.4798,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z01\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z01\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z01\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z01\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z02",
+      "grid_position": {
+        "row": 0,
+        "col": 1
+      },
+      "detection_count": 17,
+      "class_distribution": {
+        "LeafSpot_Brown": 9,
+        "General_Lesion": 6,
+        "Chlorosis_Yellow": 2
+      },
+      "total_anomaly_area_px": 82057,
+      "zone_coverage_pct": 38.488,
+      "max_confidence": 0.6243,
+      "mean_confidence": 0.5009,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z02\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z02\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z02\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z02\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z03",
+      "grid_position": {
+        "row": 0,
+        "col": 2
+      },
+      "detection_count": 16,
+      "class_distribution": {
+        "LeafSpot_Brown": 14,
+        "General_Lesion": 2
+      },
+      "total_anomaly_area_px": 79290,
+      "zone_coverage_pct": 37.121,
+      "max_confidence": 0.7141,
+      "mean_confidence": 0.5378,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z03\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z03\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z03\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z03\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z04",
+      "grid_position": {
+        "row": 1,
+        "col": 0
+      },
+      "detection_count": 14,
+      "class_distribution": {
+        "General_Lesion": 8,
+        "LeafSpot_Brown": 6
+      },
+      "total_anomaly_area_px": 52486,
+      "zone_coverage_pct": 24.618,
+      "max_confidence": 0.5923,
+      "mean_confidence": 0.4812,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z04\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z04\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z04\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z04\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z05",
+      "grid_position": {
+        "row": 1,
+        "col": 1
+      },
+      "detection_count": 12,
+      "class_distribution": {
+        "General_Lesion": 6,
+        "LeafSpot_Brown": 5,
+        "Chlorosis_Yellow": 1
+      },
+      "total_anomaly_area_px": 63782,
+      "zone_coverage_pct": 29.917,
+      "max_confidence": 0.6823,
+      "mean_confidence": 0.4896,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z05\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z05\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z05\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z05\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z06",
+      "grid_position": {
+        "row": 1,
+        "col": 2
+      },
+      "detection_count": 6,
+      "class_distribution": {
+        "Chlorosis_Yellow": 1,
+        "General_Lesion": 2,
+        "LeafSpot_Brown": 3
+      },
+      "total_anomaly_area_px": 75500,
+      "zone_coverage_pct": 35.346,
+      "max_confidence": 0.7264,
+      "mean_confidence": 0.5594,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z06\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z06\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z06\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z06\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z07",
+      "grid_position": {
+        "row": 2,
+        "col": 0
+      },
+      "detection_count": 6,
+      "class_distribution": {
+        "General_Lesion": 2,
+        "LeafSpot_Brown": 1,
+        "Chlorosis_Yellow": 3
+      },
+      "total_anomaly_area_px": 33465,
+      "zone_coverage_pct": 15.697,
+      "max_confidence": 0.6492,
+      "mean_confidence": 0.5154,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z07\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z07\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z07\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z07\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z08",
+      "grid_position": {
+        "row": 2,
+        "col": 1
+      },
+      "detection_count": 15,
+      "class_distribution": {
+        "Chlorosis_Yellow": 6,
+        "General_Lesion": 4,
+        "LeafSpot_Brown": 5
+      },
+      "total_anomaly_area_px": 40835,
+      "zone_coverage_pct": 19.153,
+      "max_confidence": 0.659,
+      "mean_confidence": 0.5186,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z08\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z08\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z08\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z08\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    },
+    {
+      "zone_id": "Z09",
+      "grid_position": {
+        "row": 2,
+        "col": 2
+      },
+      "detection_count": 18,
+      "class_distribution": {
+        "LeafSpot_Brown": 8,
+        "Chlorosis_Yellow": 7,
+        "General_Lesion": 3
+      },
+      "total_anomaly_area_px": 37089,
+      "zone_coverage_pct": 17.364,
+      "max_confidence": 0.6732,
+      "mean_confidence": 0.5526,
+      "pathogen_severity": "HIGH",
+      "files": {
+        "final_annotated": "./detections\\Z09\\09_FinalDetections_Annotated.jpg",
+        "contours": "./detections\\Z09\\08_Contours_AllCandidates.jpg",
+        "heatmap": "./detections\\Z09\\10_DetectionClass_Heatmap.jpg",
+        "morph_cleaned": "./detections\\Z09\\07_AnomalyMask_afterMorphCleanup.jpg"
+      }
+    }
+  ],
+  "detections": [
+    {
+      "zone_id": "Z01",
+      "detection_id": 1,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4122,
+      "bbox_xywh": [
+        168,
+        375,
+        50,
+        25
+      ],
+      "area_px": 427,
+      "contour_fill_ratio": 0.342
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 2,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        0,
+        360,
+        46,
+        40
+      ],
+      "area_px": 935,
+      "contour_fill_ratio": 0.5084
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5857,
+      "bbox_xywh": [
+        445,
+        346,
+        49,
+        54
+      ],
+      "area_px": 1664,
+      "contour_fill_ratio": 0.6291
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 4,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        462,
+        323,
+        29,
+        13
+      ],
+      "area_px": 176,
+      "contour_fill_ratio": 0.4668
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 5,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.433,
+      "bbox_xywh": [
+        0,
+        323,
+        37,
+        35
+      ],
+      "area_px": 520,
+      "contour_fill_ratio": 0.4015
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 6,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3782,
+      "bbox_xywh": [
+        41,
+        303,
+        116,
+        85
+      ],
+      "area_px": 2413,
+      "contour_fill_ratio": 0.2447
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 7,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4454,
+      "bbox_xywh": [
+        0,
+        271,
+        37,
+        41
+      ],
+      "area_px": 662,
+      "contour_fill_ratio": 0.4367
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 8,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5803,
+      "bbox_xywh": [
+        501,
+        245,
+        32,
+        48
+      ],
+      "area_px": 858,
+      "contour_fill_ratio": 0.5589
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 9,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4745,
+      "bbox_xywh": [
+        372,
+        237,
+        121,
+        163
+      ],
+      "area_px": 4569,
+      "contour_fill_ratio": 0.2317
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 10,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5845,
+      "bbox_xywh": [
+        265,
+        232,
+        106,
+        168
+      ],
+      "area_px": 9354,
+      "contour_fill_ratio": 0.5253
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5742,
+      "bbox_xywh": [
+        311,
+        172,
+        25,
+        22
+      ],
+      "area_px": 267,
+      "contour_fill_ratio": 0.4855
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 12,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5796,
+      "bbox_xywh": [
+        420,
+        167,
+        113,
+        59
+      ],
+      "area_px": 2887,
+      "contour_fill_ratio": 0.433
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 13,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3772,
+      "bbox_xywh": [
+        278,
+        149,
+        38,
+        70
+      ],
+      "area_px": 643,
+      "contour_fill_ratio": 0.2419
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 14,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4064,
+      "bbox_xywh": [
+        183,
+        62,
+        88,
+        91
+      ],
+      "area_px": 2607,
+      "contour_fill_ratio": 0.3255
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 15,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4742,
+      "bbox_xywh": [
+        411,
+        45,
+        39,
+        34
+      ],
+      "area_px": 201,
+      "contour_fill_ratio": 0.152
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 16,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4086,
+      "bbox_xywh": [
+        0,
+        25,
+        162,
+        228
+      ],
+      "area_px": 12247,
+      "contour_fill_ratio": 0.3316
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 17,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4255,
+      "bbox_xywh": [
+        259,
+        4,
+        64,
+        67
+      ],
+      "area_px": 1629,
+      "contour_fill_ratio": 0.3799
+    },
+    {
+      "zone_id": "Z01",
+      "detection_id": 18,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5967,
+      "bbox_xywh": [
+        427,
+        0,
+        106,
+        163
+      ],
+      "area_px": 10082,
+      "contour_fill_ratio": 0.5835
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 1,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5765,
+      "bbox_xywh": [
+        228,
+        218,
+        52,
+        44
+      ],
+      "area_px": 1034,
+      "contour_fill_ratio": 0.4521
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 2,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3918,
+      "bbox_xywh": [
+        187,
+        201,
+        43,
+        47
+      ],
+      "area_px": 573,
+      "contour_fill_ratio": 0.2838
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5541,
+      "bbox_xywh": [
+        341,
+        195,
+        39,
+        16
+      ],
+      "area_px": 239,
+      "contour_fill_ratio": 0.3838
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 4,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6243,
+      "bbox_xywh": [
+        464,
+        193,
+        69,
+        64
+      ],
+      "area_px": 1553,
+      "contour_fill_ratio": 0.3518
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 5,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5716,
+      "bbox_xywh": [
+        452,
+        148,
+        46,
+        38
+      ],
+      "area_px": 402,
+      "contour_fill_ratio": 0.23
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 6,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5223,
+      "bbox_xywh": [
+        0,
+        148,
+        140,
+        123
+      ],
+      "area_px": 5514,
+      "contour_fill_ratio": 0.3202
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 7,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5284,
+      "bbox_xywh": [
+        35,
+        141,
+        498,
+        259
+      ],
+      "area_px": 30422,
+      "contour_fill_ratio": 0.2359
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 8,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5455,
+      "bbox_xywh": [
+        267,
+        138,
+        55,
+        22
+      ],
+      "area_px": 441,
+      "contour_fill_ratio": 0.3645
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 9,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.4935,
+      "bbox_xywh": [
+        145,
+        131,
+        119,
+        62
+      ],
+      "area_px": 2035,
+      "contour_fill_ratio": 0.2758
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 10,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3753,
+      "bbox_xywh": [
+        18,
+        123,
+        51,
+        24
+      ],
+      "area_px": 289,
+      "contour_fill_ratio": 0.2365
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.576,
+      "bbox_xywh": [
+        510,
+        120,
+        23,
+        28
+      ],
+      "area_px": 282,
+      "contour_fill_ratio": 0.4379
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 12,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5146,
+      "bbox_xywh": [
+        478,
+        94,
+        33,
+        26
+      ],
+      "area_px": 250,
+      "contour_fill_ratio": 0.292
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 13,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4233,
+      "bbox_xywh": [
+        491,
+        47,
+        33,
+        15
+      ],
+      "area_px": 185,
+      "contour_fill_ratio": 0.3737
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 14,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3884,
+      "bbox_xywh": [
+        441,
+        30,
+        54,
+        56
+      ],
+      "area_px": 829,
+      "contour_fill_ratio": 0.2741
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 15,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4109,
+      "bbox_xywh": [
+        411,
+        25,
+        23,
+        36
+      ],
+      "area_px": 280,
+      "contour_fill_ratio": 0.3382
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 16,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5689,
+      "bbox_xywh": [
+        470,
+        0,
+        21,
+        36
+      ],
+      "area_px": 292,
+      "contour_fill_ratio": 0.3862
+    },
+    {
+      "zone_id": "Z02",
+      "detection_id": 17,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        0,
+        0,
+        433,
+        154
+      ],
+      "area_px": 37437,
+      "contour_fill_ratio": 0.5614
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 1,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6809,
+      "bbox_xywh": [
+        58,
+        283,
+        110,
+        117
+      ],
+      "area_px": 4144,
+      "contour_fill_ratio": 0.322
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 2,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.7141,
+      "bbox_xywh": [
+        0,
+        270,
+        58,
+        34
+      ],
+      "area_px": 649,
+      "contour_fill_ratio": 0.3294
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5408,
+      "bbox_xywh": [
+        136,
+        195,
+        55,
+        53
+      ],
+      "area_px": 1099,
+      "contour_fill_ratio": 0.3772
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 4,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6574,
+      "bbox_xywh": [
+        0,
+        189,
+        28,
+        32
+      ],
+      "area_px": 421,
+      "contour_fill_ratio": 0.4699
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 5,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5185,
+      "bbox_xywh": [
+        27,
+        186,
+        67,
+        33
+      ],
+      "area_px": 363,
+      "contour_fill_ratio": 0.1644
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 6,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4746,
+      "bbox_xywh": [
+        103,
+        177,
+        27,
+        32
+      ],
+      "area_px": 198,
+      "contour_fill_ratio": 0.2297
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 7,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5581,
+      "bbox_xywh": [
+        54,
+        139,
+        35,
+        31
+      ],
+      "area_px": 338,
+      "contour_fill_ratio": 0.312
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 8,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4833,
+      "bbox_xywh": [
+        137,
+        106,
+        57,
+        51
+      ],
+      "area_px": 725,
+      "contour_fill_ratio": 0.2496
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 9,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6197,
+      "bbox_xywh": [
+        127,
+        100,
+        407,
+        300
+      ],
+      "area_px": 69204,
+      "contour_fill_ratio": 0.5668
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 10,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5099,
+      "bbox_xywh": [
+        327,
+        62,
+        56,
+        51
+      ],
+      "area_px": 729,
+      "contour_fill_ratio": 0.2554
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5067,
+      "bbox_xywh": [
+        364,
+        26,
+        47,
+        34
+      ],
+      "area_px": 425,
+      "contour_fill_ratio": 0.266
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 12,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5004,
+      "bbox_xywh": [
+        421,
+        23,
+        21,
+        29
+      ],
+      "area_px": 179,
+      "contour_fill_ratio": 0.2939
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 13,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        95,
+        20,
+        13,
+        31
+      ],
+      "area_px": 235,
+      "contour_fill_ratio": 0.5831
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 14,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5076,
+      "bbox_xywh": [
+        285,
+        13,
+        24,
+        25
+      ],
+      "area_px": 170,
+      "contour_fill_ratio": 0.2833
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 15,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4602,
+      "bbox_xywh": [
+        368,
+        0,
+        49,
+        25
+      ],
+      "area_px": 218,
+      "contour_fill_ratio": 0.1784
+    },
+    {
+      "zone_id": "Z03",
+      "detection_id": 16,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4219,
+      "bbox_xywh": [
+        233,
+        0,
+        18,
+        29
+      ],
+      "area_px": 193,
+      "contour_fill_ratio": 0.3697
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 1,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4495,
+      "bbox_xywh": [
+        317,
+        373,
+        31,
+        27
+      ],
+      "area_px": 375,
+      "contour_fill_ratio": 0.4486
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 2,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3751,
+      "bbox_xywh": [
+        460,
+        365,
+        61,
+        35
+      ],
+      "area_px": 504,
+      "contour_fill_ratio": 0.2361
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 3,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        488,
+        284,
+        17,
+        20
+      ],
+      "area_px": 204,
+      "contour_fill_ratio": 0.6015
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 4,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5923,
+      "bbox_xywh": [
+        319,
+        269,
+        36,
+        72
+      ],
+      "area_px": 1526,
+      "contour_fill_ratio": 0.5889
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 5,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.434,
+      "bbox_xywh": [
+        275,
+        211,
+        23,
+        44
+      ],
+      "area_px": 409,
+      "contour_fill_ratio": 0.4042
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 6,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5477,
+      "bbox_xywh": [
+        361,
+        210,
+        63,
+        190
+      ],
+      "area_px": 4162,
+      "contour_fill_ratio": 0.3477
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 7,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4116,
+      "bbox_xywh": [
+        0,
+        118,
+        17,
+        42
+      ],
+      "area_px": 243,
+      "contour_fill_ratio": 0.3403
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 8,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4039,
+      "bbox_xywh": [
+        187,
+        109,
+        47,
+        28
+      ],
+      "area_px": 419,
+      "contour_fill_ratio": 0.3184
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 9,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5797,
+      "bbox_xywh": [
+        420,
+        98,
+        113,
+        109
+      ],
+      "area_px": 4997,
+      "contour_fill_ratio": 0.4057
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 10,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5768,
+      "bbox_xywh": [
+        444,
+        62,
+        44,
+        22
+      ],
+      "area_px": 495,
+      "contour_fill_ratio": 0.5114
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5914,
+      "bbox_xywh": [
+        446,
+        0,
+        72,
+        66
+      ],
+      "area_px": 2667,
+      "contour_fill_ratio": 0.5612
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 12,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5164,
+      "bbox_xywh": [
+        380,
+        0,
+        53,
+        188
+      ],
+      "area_px": 2805,
+      "contour_fill_ratio": 0.2815
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 13,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3921,
+      "bbox_xywh": [
+        79,
+        0,
+        287,
+        400
+      ],
+      "area_px": 32660,
+      "contour_fill_ratio": 0.2845
+    },
+    {
+      "zone_id": "Z04",
+      "detection_id": 14,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4165,
+      "bbox_xywh": [
+        27,
+        0,
+        60,
+        48
+      ],
+      "area_px": 1020,
+      "contour_fill_ratio": 0.3543
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 1,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4424,
+      "bbox_xywh": [
+        405,
+        358,
+        128,
+        42
+      ],
+      "area_px": 2302,
+      "contour_fill_ratio": 0.4283
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 2,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4045,
+      "bbox_xywh": [
+        500,
+        333,
+        33,
+        32
+      ],
+      "area_px": 338,
+      "contour_fill_ratio": 0.3201
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6118,
+      "bbox_xywh": [
+        46,
+        326,
+        118,
+        74
+      ],
+      "area_px": 2947,
+      "contour_fill_ratio": 0.3376
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 4,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4212,
+      "bbox_xywh": [
+        490,
+        281,
+        31,
+        15
+      ],
+      "area_px": 171,
+      "contour_fill_ratio": 0.3677
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 5,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3736,
+      "bbox_xywh": [
+        299,
+        184,
+        100,
+        52
+      ],
+      "area_px": 1204,
+      "contour_fill_ratio": 0.2316
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 6,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.441,
+      "bbox_xywh": [
+        453,
+        174,
+        80,
+        101
+      ],
+      "area_px": 3427,
+      "contour_fill_ratio": 0.4242
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 7,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3929,
+      "bbox_xywh": [
+        334,
+        146,
+        26,
+        23
+      ],
+      "area_px": 171,
+      "contour_fill_ratio": 0.2868
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 8,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4904,
+      "bbox_xywh": [
+        404,
+        133,
+        129,
+        61
+      ],
+      "area_px": 1533,
+      "contour_fill_ratio": 0.1949
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 9,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.501,
+      "bbox_xywh": [
+        378,
+        117,
+        40,
+        46
+      ],
+      "area_px": 429,
+      "contour_fill_ratio": 0.2334
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 10,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6823,
+      "bbox_xywh": [
+        467,
+        64,
+        61,
+        52
+      ],
+      "area_px": 833,
+      "contour_fill_ratio": 0.2628
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5707,
+      "bbox_xywh": [
+        18,
+        0,
+        377,
+        328
+      ],
+      "area_px": 48187,
+      "contour_fill_ratio": 0.3897
+    },
+    {
+      "zone_id": "Z05",
+      "detection_id": 12,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.544,
+      "bbox_xywh": [
+        0,
+        0,
+        100,
+        71
+      ],
+      "area_px": 2240,
+      "contour_fill_ratio": 0.3155
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 1,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6413,
+      "bbox_xywh": [
+        203,
+        293,
+        32,
+        26
+      ],
+      "area_px": 308,
+      "contour_fill_ratio": 0.3702
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 2,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3902,
+      "bbox_xywh": [
+        469,
+        291,
+        65,
+        109
+      ],
+      "area_px": 1977,
+      "contour_fill_ratio": 0.279
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.7264,
+      "bbox_xywh": [
+        46,
+        50,
+        42,
+        24
+      ],
+      "area_px": 283,
+      "contour_fill_ratio": 0.2808
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 4,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5773,
+      "bbox_xywh": [
+        263,
+        0,
+        271,
+        250
+      ],
+      "area_px": 37340,
+      "contour_fill_ratio": 0.5512
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 5,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4065,
+      "bbox_xywh": [
+        253,
+        0,
+        57,
+        43
+      ],
+      "area_px": 798,
+      "contour_fill_ratio": 0.3258
+    },
+    {
+      "zone_id": "Z06",
+      "detection_id": 6,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6149,
+      "bbox_xywh": [
+        0,
+        0,
+        231,
+        374
+      ],
+      "area_px": 34794,
+      "contour_fill_ratio": 0.4027
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 1,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        373,
+        357,
+        46,
+        43
+      ],
+      "area_px": 931,
+      "contour_fill_ratio": 0.4707
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 2,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5419,
+      "bbox_xywh": [
+        304,
+        254,
+        24,
+        38
+      ],
+      "area_px": 295,
+      "contour_fill_ratio": 0.3235
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 3,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6492,
+      "bbox_xywh": [
+        456,
+        100,
+        77,
+        87
+      ],
+      "area_px": 3197,
+      "contour_fill_ratio": 0.4773
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 4,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6171,
+      "bbox_xywh": [
+        472,
+        66,
+        61,
+        34
+      ],
+      "area_px": 748,
+      "contour_fill_ratio": 0.3609
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 5,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.4271,
+      "bbox_xywh": [
+        307,
+        0,
+        226,
+        400
+      ],
+      "area_px": 11428,
+      "contour_fill_ratio": 0.1264
+    },
+    {
+      "zone_id": "Z07",
+      "detection_id": 6,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.407,
+      "bbox_xywh": [
+        110,
+        0,
+        153,
+        337
+      ],
+      "area_px": 16866,
+      "contour_fill_ratio": 0.3271
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 1,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5903,
+      "bbox_xywh": [
+        69,
+        333,
+        32,
+        33
+      ],
+      "area_px": 438,
+      "contour_fill_ratio": 0.4152
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 2,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5124,
+      "bbox_xywh": [
+        189,
+        275,
+        36,
+        24
+      ],
+      "area_px": 258,
+      "contour_fill_ratio": 0.2986
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 3,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4465,
+      "bbox_xywh": [
+        224,
+        256,
+        197,
+        144
+      ],
+      "area_px": 12483,
+      "contour_fill_ratio": 0.4401
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 4,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4391,
+      "bbox_xywh": [
+        31,
+        246,
+        21,
+        22
+      ],
+      "area_px": 193,
+      "contour_fill_ratio": 0.4188
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 5,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.4419,
+      "bbox_xywh": [
+        0,
+        223,
+        198,
+        99
+      ],
+      "area_px": 3212,
+      "contour_fill_ratio": 0.1639
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 6,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5643,
+      "bbox_xywh": [
+        283,
+        190,
+        33,
+        28
+      ],
+      "area_px": 205,
+      "contour_fill_ratio": 0.2219
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 7,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6122,
+      "bbox_xywh": [
+        322,
+        182,
+        111,
+        28
+      ],
+      "area_px": 766,
+      "contour_fill_ratio": 0.2466
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 8,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5411,
+      "bbox_xywh": [
+        437,
+        168,
+        96,
+        35
+      ],
+      "area_px": 558,
+      "contour_fill_ratio": 0.1661
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 9,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.515,
+      "bbox_xywh": [
+        126,
+        164,
+        58,
+        60
+      ],
+      "area_px": 504,
+      "contour_fill_ratio": 0.145
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 10,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6173,
+      "bbox_xywh": [
+        88,
+        139,
+        33,
+        24
+      ],
+      "area_px": 233,
+      "contour_fill_ratio": 0.2948
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 11,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5271,
+      "bbox_xywh": [
+        0,
+        64,
+        65,
+        109
+      ],
+      "area_px": 2117,
+      "contour_fill_ratio": 0.2988
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 12,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3763,
+      "bbox_xywh": [
+        337,
+        3,
+        41,
+        33
+      ],
+      "area_px": 324,
+      "contour_fill_ratio": 0.2395
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 13,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.45,
+      "bbox_xywh": [
+        295,
+        0,
+        238,
+        164
+      ],
+      "area_px": 19006,
+      "contour_fill_ratio": 0.4869
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 14,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.4861,
+      "bbox_xywh": [
+        87,
+        0,
+        32,
+        22
+      ],
+      "area_px": 177,
+      "contour_fill_ratio": 0.2514
+    },
+    {
+      "zone_id": "Z08",
+      "detection_id": 15,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.659,
+      "bbox_xywh": [
+        38,
+        0,
+        46,
+        26
+      ],
+      "area_px": 361,
+      "contour_fill_ratio": 0.3023
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 1,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6533,
+      "bbox_xywh": [
+        86,
+        376,
+        53,
+        24
+      ],
+      "area_px": 551,
+      "contour_fill_ratio": 0.4332
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 2,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6112,
+      "bbox_xywh": [
+        22,
+        373,
+        25,
+        27
+      ],
+      "area_px": 246,
+      "contour_fill_ratio": 0.3644
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 3,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4757,
+      "bbox_xywh": [
+        58,
+        350,
+        29,
+        50
+      ],
+      "area_px": 308,
+      "contour_fill_ratio": 0.2128
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 4,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5552,
+      "bbox_xywh": [
+        86,
+        328,
+        34,
+        47
+      ],
+      "area_px": 508,
+      "contour_fill_ratio": 0.3182
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 5,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6732,
+      "bbox_xywh": [
+        314,
+        322,
+        30,
+        32
+      ],
+      "area_px": 407,
+      "contour_fill_ratio": 0.424
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 6,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.3834,
+      "bbox_xywh": [
+        23,
+        274,
+        69,
+        42
+      ],
+      "area_px": 753,
+      "contour_fill_ratio": 0.2598
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 7,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5643,
+      "bbox_xywh": [
+        500,
+        273,
+        34,
+        46
+      ],
+      "area_px": 458,
+      "contour_fill_ratio": 0.2928
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 8,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5128,
+      "bbox_xywh": [
+        0,
+        252,
+        36,
+        36
+      ],
+      "area_px": 364,
+      "contour_fill_ratio": 0.2812
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 9,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5342,
+      "bbox_xywh": [
+        304,
+        235,
+        26,
+        40
+      ],
+      "area_px": 315,
+      "contour_fill_ratio": 0.3029
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 10,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6688,
+      "bbox_xywh": [
+        198,
+        196,
+        27,
+        36
+      ],
+      "area_px": 421,
+      "contour_fill_ratio": 0.4336
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 11,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.5193,
+      "bbox_xywh": [
+        474,
+        187,
+        33,
+        30
+      ],
+      "area_px": 270,
+      "contour_fill_ratio": 0.2727
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 12,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.5721,
+      "bbox_xywh": [
+        45,
+        176,
+        54,
+        96
+      ],
+      "area_px": 1760,
+      "contour_fill_ratio": 0.3396
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 13,
+      "class_id": 3,
+      "class_label": "Chlorosis_Yellow",
+      "confidence": 0.6619,
+      "bbox_xywh": [
+        148,
+        167,
+        42,
+        17
+      ],
+      "area_px": 288,
+      "contour_fill_ratio": 0.4034
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 14,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.4857,
+      "bbox_xywh": [
+        322,
+        160,
+        130,
+        240
+      ],
+      "area_px": 4013,
+      "contour_fill_ratio": 0.1286
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 15,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.4091,
+      "bbox_xywh": [
+        13,
+        57,
+        43,
+        23
+      ],
+      "area_px": 329,
+      "contour_fill_ratio": 0.3332
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 16,
+      "class_id": 0,
+      "class_label": "General_Lesion",
+      "confidence": 0.416,
+      "bbox_xywh": [
+        0,
+        51,
+        30,
+        49
+      ],
+      "area_px": 518,
+      "contour_fill_ratio": 0.3527
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 17,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6258,
+      "bbox_xywh": [
+        457,
+        0,
+        77,
+        147
+      ],
+      "area_px": 6896,
+      "contour_fill_ratio": 0.6093
+    },
+    {
+      "zone_id": "Z09",
+      "detection_id": 18,
+      "class_id": 2,
+      "class_label": "LeafSpot_Brown",
+      "confidence": 0.6242,
+      "bbox_xywh": [
+        64,
+        0,
+        272,
+        173
+      ],
+      "area_px": 18684,
+      "contour_fill_ratio": 0.3971
+    }
+  ]
+}

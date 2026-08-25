@@ -1,0 +1,10 @@
+zone_id,grid_row,grid_col,detection_count,class_distribution,total_anomaly_area_px,zone_coverage_pct,max_confidence,mean_confidence,pathogen_severity
+Z01,0,0,18,"{'General_Lesion': 10, 'LeafSpot_Brown': 7, 'Chlorosis_Yellow': 1}",52141,24.456,0.5967,0.4798,HIGH
+Z02,0,1,17,"{'LeafSpot_Brown': 9, 'General_Lesion': 6, 'Chlorosis_Yellow': 2}",82057,38.488,0.6243,0.5009,HIGH
+Z03,0,2,16,"{'LeafSpot_Brown': 14, 'General_Lesion': 2}",79290,37.121,0.7141,0.5378,HIGH
+Z04,1,0,14,"{'General_Lesion': 8, 'LeafSpot_Brown': 6}",52486,24.618,0.5923,0.4812,HIGH
+Z05,1,1,12,"{'General_Lesion': 6, 'LeafSpot_Brown': 5, 'Chlorosis_Yellow': 1}",63782,29.917,0.6823,0.4896,HIGH
+Z06,1,2,6,"{'Chlorosis_Yellow': 1, 'General_Lesion': 2, 'LeafSpot_Brown': 3}",75500,35.346,0.7264,0.5594,HIGH
+Z07,2,0,6,"{'General_Lesion': 2, 'LeafSpot_Brown': 1, 'Chlorosis_Yellow': 3}",33465,15.697,0.6492,0.5154,HIGH
+Z08,2,1,15,"{'Chlorosis_Yellow': 6, 'General_Lesion': 4, 'LeafSpot_Brown': 5}",40835,19.153,0.659,0.5186,HIGH
+Z09,2,2,18,"{'LeafSpot_Brown': 8, 'Chlorosis_Yellow': 7, 'General_Lesion': 3}",37089,17.364,0.6732,0.5526,HIGH
