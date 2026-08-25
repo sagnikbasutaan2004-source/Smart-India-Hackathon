@@ -19,10 +19,10 @@
     "artifact_index.json"
   ],
   "orthomosaic_files": {
-    "raw_no_annotation": "./artifacts/03_final_stitched_canvas_NO_ANNOTATION_RAW.jpg",
+    "raw_no_annotation": "./artifacts\\03_final_stitched_canvas_NO_ANNOTATION_RAW.jpg",
     "annotated_grid": "./field_twin_grid.jpg",
-    "health_overlay": "./field_health_overlay.jpg",
-    "pathogen_overlay": "./field_pathogen_overlay.jpg",
+    "health_overlay": "field_health_overlay.jpg",
+    "pathogen_overlay": "field_pathogen_overlay.jpg",
     "epidemiology_overlay": "field_epidemiology_overlay.jpg"
   },
   "micro_zones_dir": "./micro_zones",
@@ -36,13 +36,13 @@
     "pathogen_report_json": "./metadata/pathogen_report.json",
     "pathogen_detections_csv": "./metadata/pathogen_detections.csv",
     "pathogen_zone_summary_csv": "./metadata/pathogen_zone_summary.csv",
-    "weather_report_json": "./metadata/weather_report.json",
+    "weather_report_json": "./metadata\\weather_report.json",
     "weather_hourly_csv": "./metadata/weather_hourly.csv",
     "weather_daily_summary_csv": "./metadata/weather_daily_summary.csv",
-    "epidemiology_report_json": "./epidemiology/epidemiology_report.json",
+    "epidemiology_report_json": "./epidemiology\\epidemiology_report.json",
     "epidemiology_zones_csv": "./epidemiology/epidemiology_zones.csv",
     "epidemiology_adjacency_csv": "./epidemiology/epidemiology_adjacency.csv",
-    "scenario_analysis_report_json": "./metadata/scenario_analysis_report.json"
+    "scenario_analysis_report_json": "./metadata\\scenario_analysis_report.json"
   },
   "zone_count": 9,
   "gps_center": {
