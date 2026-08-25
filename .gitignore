@@ -10,8 +10,14 @@ venv/
 ENV/
 env/
 
-# Large raw dataset directory (950MB+) - generated twin artifacts are tracked in repo
+# Large raw dataset directory (950MB+)
 Kaggle image/
+
+# Intermediate debug renders & temporary stitched canvas copies
+artifacts/*.JPG
+artifacts/*.jpg
+detections/*/[0-8]*_*.jpg
+detections/*/10_*.jpg
 
 # System / logs
 *.log
