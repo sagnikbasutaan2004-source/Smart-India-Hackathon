@@ -19,10 +19,10 @@
     "artifact_index.json"
   ],
   "orthomosaic_files": {
-    "raw_no_annotation": "./artifacts\\03_final_stitched_canvas_NO_ANNOTATION_RAW.jpg",
+    "raw_no_annotation": "./artifacts/03_final_stitched_canvas_NO_ANNOTATION_RAW.jpg",
     "annotated_grid": "./field_twin_grid.jpg",
-    "health_overlay": "field_health_overlay.jpg",
-    "pathogen_overlay": "field_pathogen_overlay.jpg",
+    "health_overlay": "./field_health_overlay.jpg",
+    "pathogen_overlay": "./field_pathogen_overlay.jpg",
     "epidemiology_overlay": "field_epidemiology_overlay.jpg"
   },
   "micro_zones_dir": "./micro_zones",

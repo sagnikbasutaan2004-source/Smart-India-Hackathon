@@ -1440,19 +1440,79 @@ def run_genai_scenario_analysis(json_path_weather, json_path_epidemiology, json_
 
     analysis = None
     genai_status = {"source": None, "error": None, "model": None}
-    # Try OpenAI API if configured
-    try:
-        import os as _os
-        api_key = _os.environ.get("OPENAI_API_KEY")
-        if not api_key:
-            env_path = ".env"
-            if os.path.exists(env_path):
-                with open(env_path) as _ef:
-                    for line in _ef:
-                        line = line.strip()
-                        if line.startswith("OPENAI_API_KEY="):
-                            api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
-        if api_key:
+    
+    # Extract API keys from environment or .env
+    groq_key = os.environ.get("GROQ_API_KEY") or os.environ.get("GROK_API_KEY") or os.environ.get("XAI_API_KEY")
+    openai_key = os.environ.get("OPENAI_API_KEY")
+    
+    if not groq_key and not openai_key and os.path.exists(".env"):
+        try:
+            with open(".env") as _ef:
+                for line in _ef:
+                    line = line.strip()
+                    if line.startswith("GROQ_API_KEY=") or line.startswith("GROK_API_KEY=") or line.startswith("XAI_API_KEY="):
+                        groq_key = line.split("=", 1)[1].strip().strip('"').strip("'")
+                    elif line.startswith("OPENAI_API_KEY="):
+                        openai_key = line.split("=", 1)[1].strip().strip('"').strip("'")
+        except Exception:
+            pass
+
+    # 1. Try Groq / Grok API if key available (gsk_... for Groq, xai-... for xAI)
+    if groq_key:
+        try:
+            import requests as _rq
+            if groq_key.startswith("gsk_"):
+                # Groq Cloud API
+                models_to_try = ["openai/gpt-oss-120b", "qwen/qwen3.6-27b", "groq/compound"]
+                for mod in models_to_try:
+                    body = {
+                        "model": mod,
+                        "temperature": 0.2,
+                        "response_format": {"type": "json_object"},
+                        "messages": [
+                            {"role": "system", "content": "You are an expert precision agriculture pathologist. You always respond with pure JSON following the provided schema exactly, no prose around it."},
+                            {"role": "user", "content": prompt}
+                        ]
+                    }
+                    resp = _rq.post("https://api.groq.com/openai/v1/chat/completions", json=body,
+                                    headers={"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}, timeout=60)
+                    if resp.status_code == 200:
+                        content = resp.json()["choices"][0]["message"]["content"]
+                        # Strip any reasoning or code block wrappers if present
+                        if "```json" in content:
+                            content = content.split("```json")[1].split("```")[0].strip()
+                        elif "```" in content:
+                            content = content.split("```")[1].split("```")[0].strip()
+                        analysis = json.loads(content)
+                        genai_status = {"source": "groq_grok", "model": mod, "error": None}
+                        break
+                    else:
+                        genai_status["error"] = f"Groq API ({mod}) HTTP {resp.status_code}: {resp.text[:120]}"
+            else:
+                # xAI Grok API
+                body = {
+                    "model": "grok-2-latest",
+                    "temperature": 0.2,
+                    "response_format": {"type": "json_object"},
+                    "messages": [
+                        {"role": "system", "content": "You are an expert precision agriculture pathologist. You always respond with pure JSON following the provided schema exactly, no prose around it."},
+                        {"role": "user", "content": prompt}
+                    ]
+                }
+                resp = _rq.post("https://api.x.ai/v1/chat/completions", json=body,
+                                headers={"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}, timeout=60)
+                if resp.status_code == 200:
+                    content = resp.json()["choices"][0]["message"]["content"]
+                    analysis = json.loads(content)
+                    genai_status = {"source": "grok", "model": "grok-2-latest", "error": None}
+                else:
+                    genai_status["error"] = f"xAI Grok API HTTP {resp.status_code}: {resp.text[:120]}"
+        except Exception as e:
+            genai_status["error"] = f"Grok/Groq attempt: {type(e).__name__}: {str(e)[:140]}"
+
+    # 2. Fallback to OpenAI API if Grok failed but OPENAI_API_KEY configured
+    if analysis is None and openai_key:
+        try:
             import requests as _rq
             body = {
                 "model": "gpt-4o-mini",
@@ -1465,19 +1525,21 @@ def run_genai_scenario_analysis(json_path_weather, json_path_epidemiology, json_
                 ]
             }
             resp = _rq.post("https://api.openai.com/v1/chat/completions", json=body,
-                            headers={"Authorization": f"Bearer {api_key}"}, timeout=60)
+                            headers={"Authorization": f"Bearer {openai_key}"}, timeout=60)
             if resp.status_code == 200:
                 content = resp.json()["choices"][0]["message"]["content"]
                 analysis = json.loads(content)
                 genai_status = {"source": "openai", "model": "gpt-4o-mini", "error": None}
-    except Exception as e:
-        genai_status["error"] = f"OpenAI attempt: {type(e).__name__}: {str(e)[:140]}"
+        except Exception as e:
+            err_msg = f"OpenAI attempt: {type(e).__name__}: {str(e)[:140]}"
+            genai_status["error"] = (genai_status["error"] + " | " + err_msg) if genai_status["error"] else err_msg
 
+    # 3. Fallback to Built-in Rule-Based Expert System if no API keys worked
     if analysis is None:
         analysis = generate_rule_based_scenario_report(weather_summary, epi_manifest, health_field_summary, pathogen_totals)
         if genai_status["source"] is None:
             genai_status = {"source": "rule_based_expert_system", "model": "builtin_v1",
-                            "error": "LLM API key not configured; deterministic rule engine used. Set OPENAI_API_KEY in Settings > AI to enable richer GenAI analysis."}
+                            "error": "No LLM API key configured. Set GROK_API_KEY / GROQ_API_KEY in .env to enable GenAI scenario analysis."}
 
     report = {"genai_status": genai_status, "scenario_analysis": analysis}
     out_json = os.path.join(out_dir, "scenario_analysis_report.json")

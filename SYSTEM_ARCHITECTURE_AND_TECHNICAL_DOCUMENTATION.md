@@ -213,16 +213,16 @@ Connects capture-time spatial health with historical weather patterns to infer e
 Synthesizes all quantitative reports (health scores, pathogen counts, Getis-Ord $G_i^*$ clusters, weather parameters) into an executive agronomic advisory report.
 
 #### 2. API Keys & Configuration
-- **Environment Variable**: `OPENAI_API_KEY`
-- **Model**: `gpt-4o-mini` (or `gpt-4o`)
-- **API Endpoint**: `https://api.openai.com/v1/chat/completions`
+- **Primary Environment Variable**: `GROK_API_KEY` or `GROQ_API_KEY` (or `XAI_API_KEY`)
+- **Fallback Environment Variable**: `OPENAI_API_KEY`
+- **Primary LLM Engine**: Grok LLM / Groq Ultra-Fast Inference Engine (`openai/gpt-oss-120b` or `grok-2-latest`)
+- **API Endpoint**: `https://api.groq.com/openai/v1/chat/completions` / `https://api.x.ai/v1/chat/completions`
 - **Configuration Parameters**:
   - `response_format`: `{"type": "json_object"}`
   - `temperature`: `0.2` (for consistent, deterministic structured output)
-  - `max_tokens`: `3500`
 
 #### 3. Deterministic Rule-Based Fallback System
-If `OPENAI_API_KEY` is not configured, the system automatically engages `generate_rule_based_scenario_report()`—a built-in expert decision system that constructs the exact structured JSON schema using deterministic agro-pathological rules, ensuring 100% operational uptime.
+If no LLM API keys are configured in `.env`, the system automatically engages `generate_rule_based_scenario_report()`—a built-in expert decision system (`builtin_v1`) that constructs the exact structured JSON schema using deterministic agro-pathological rules, ensuring 100% operational uptime.
 
 ---
 
@@ -231,7 +231,7 @@ If `OPENAI_API_KEY` is not configured, the system automatically engages `generat
 ### Required API Keys & Services
 | Service / API | Function | API Key Required? | Environment Variable | Fallback Behavior |
 | :--- | :--- | :--- | :--- | :--- |
-| **OpenAI API** | GenAI Agronomic Scenario Advisory | Optional | `OPENAI_API_KEY` | Built-in Rule-Based Expert System (`builtin_v1`) |
+| **Grok LLM (xAI / Groq)** | GenAI Agronomic Scenario Advisory | Optional (Integrated) | `GROK_API_KEY` / `GROQ_API_KEY` | OpenAI API $\rightarrow$ Built-in Rule-Based Expert System (`builtin_v1`) |
 | **Open-Meteo API** | Historical Archive Weather Fetch | No (Free Public API) | N/A | Region-Representative Central India Monsoon Archive |
 
 ### Machine Learning / Computer Vision Algorithms & Models
