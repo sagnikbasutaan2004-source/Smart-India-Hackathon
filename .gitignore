@@ -26,3 +26,8 @@ verify_log.txt
 Thumbs.db
 .idea/
 .vscode/
+
+# Environment / API Secrets
+.env
+.env.local
+

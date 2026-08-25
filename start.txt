@@ -1,0 +1,43 @@
+================================================================================
+AGRIDRONE DIGITAL TWIN & TARGETEDCROP PLATFORM - START GUIDE
+================================================================================
+
+1. STREAMLIT DASHBOARD (Primary UI — Field Intelligence & AI Advisory)
+--------------------------------------------------------------------------------
+Directory: Root directory
+Path:      C:\Users\hp\CODEBASE\Projects\SIH\Smart-India-Hackathon
+
+Command:
+  python -m streamlit run dashboard.py
+
+URL:
+  http://localhost:8501
+
+Includes:
+  • Field Digital Twin Overview (Orthomosaic, 3x3 Grid, Overlays)
+  • Weather @ Capture Time & Agro-Risk Inferences
+  • Micro-Zone Inspector & 10-Stage Pathology Diagnostics
+  • Vegetation Health Analytics (ExG / VARI / NDVI proxy / MGRVI)
+  • Pathogen Anomaly Detection (HSV / LAB color profiling)
+  • Spatial Epidemiology (Getis-Ord Gi* Hotspots & Coldspots)
+  • Full Scenario Analysis & GenAI Advisory (Groq LLM)
+
+
+2. BACKEND REST API (Optional Service — FastAPI + MongoDB)
+--------------------------------------------------------------------------------
+Directory: Root directory
+Path:      C:\Users\hp\CODEBASE\Projects\SIH\Smart-India-Hackathon
+
+Command:
+  python -m uvicorn backend.main:app --reload --port 8000
+
+URL & Swagger Interactive Docs:
+  http://localhost:8000
+  http://localhost:8000/docs
+
+Includes:
+  • MongoDB database connection & collections (farms, crops, users, scans)
+  • REST API routes for authentication, farm/crop management, and scan history
+  • Static pipeline overlay image server (/pipeline/...)
+
+================================================================================

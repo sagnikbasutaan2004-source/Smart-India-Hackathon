@@ -1440,11 +1440,12 @@ def run_genai_scenario_analysis(json_path_weather, json_path_epidemiology, json_
 
     analysis = None
     genai_status = {"source": None, "error": None, "model": None}
-    # Try OpenAI API if configured
+    # Try Groq API or OpenAI API if configured
     try:
         import os as _os
         api_key = _os.environ.get("OPENAI_API_KEY")
-        if not api_key:
+        groq_key = _os.environ.get("GROQ_API_KEY")
+        if not api_key and not groq_key:
             env_path = ".env"
             if os.path.exists(env_path):
                 with open(env_path) as _ef:
@@ -1452,32 +1453,52 @@ def run_genai_scenario_analysis(json_path_weather, json_path_epidemiology, json_
                         line = line.strip()
                         if line.startswith("OPENAI_API_KEY="):
                             api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
-        if api_key:
-            import requests as _rq
-            body = {
-                "model": "gpt-4o-mini",
-                "response_format": {"type": "json_object"},
-                "temperature": 0.2,
-                "max_tokens": 3500,
-                "messages": [
-                    {"role": "system", "content": "You are an expert precision agriculture pathologist. You always respond with pure JSON following the provided schema exactly, no prose around it."},
-                    {"role": "user", "content": prompt}
-                ]
-            }
+                        elif line.startswith("GROQ_API_KEY="):
+                            groq_key = line.split("=", 1)[1].strip().strip('"').strip("'")
+        
+        import requests as _rq
+        body = {
+            "response_format": {"type": "json_object"},
+            "temperature": 0.2,
+            "max_tokens": 3500,
+            "messages": [
+                {"role": "system", "content": "You are an expert precision agriculture pathologist. You always respond with pure JSON following the provided schema exactly, no prose around it."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+        
+        if groq_key:
+            body["model"] = "openai/gpt-oss-120b"
+            resp = _rq.post("https://api.groq.com/openai/v1/chat/completions", json=body,
+                            headers={"Authorization": f"Bearer {groq_key}"}, timeout=60)
+            if resp.status_code == 200:
+                content = resp.json()["choices"][0]["message"]["content"]
+                analysis = json.loads(content)
+                genai_status = {"source": "groq", "model": "openai/gpt-oss-120b", "error": None}
+            else:
+                genai_status["error"] = f"Groq attempt failed: {resp.text}"
+        elif api_key:
+            body["model"] = "gpt-4o-mini"
             resp = _rq.post("https://api.openai.com/v1/chat/completions", json=body,
                             headers={"Authorization": f"Bearer {api_key}"}, timeout=60)
             if resp.status_code == 200:
                 content = resp.json()["choices"][0]["message"]["content"]
                 analysis = json.loads(content)
                 genai_status = {"source": "openai", "model": "gpt-4o-mini", "error": None}
+            else:
+                genai_status["error"] = f"OpenAI attempt failed: {resp.text}"
     except Exception as e:
-        genai_status["error"] = f"OpenAI attempt: {type(e).__name__}: {str(e)[:140]}"
+        genai_status["error"] = f"GenAI attempt: {type(e).__name__}: {str(e)[:140]}"
 
     if analysis is None:
         analysis = generate_rule_based_scenario_report(weather_summary, epi_manifest, health_field_summary, pathogen_totals)
         if genai_status["source"] is None:
-            genai_status = {"source": "rule_based_expert_system", "model": "builtin_v1",
-                            "error": "LLM API key not configured; deterministic rule engine used. Set OPENAI_API_KEY in Settings > AI to enable richer GenAI analysis."}
+            prev_error = genai_status.get("error")
+            genai_status = {"source": "rule_based_expert_system", "model": "builtin_v1"}
+            if prev_error:
+                genai_status["error"] = prev_error
+            else:
+                genai_status["error"] = "LLM API key not configured; deterministic rule engine used."
 
     report = {"genai_status": genai_status, "scenario_analysis": analysis}
     out_json = os.path.join(out_dir, "scenario_analysis_report.json")
@@ -1660,7 +1681,7 @@ def generate_rule_based_scenario_report(weather_summary, epi_manifest, health_fi
                 "Ground scouting: 48h and 96h post-spray — inspect 10 random leaves / hotspot zone; score lesion age (chlorotic halos / necrotic centers / fresh sporulation). Drone re-scan cadence: every 10 days through epidemic window; shorten to 5 days if 7-day rolling rain >25mm or RH mean >80%. Ground GPS-tag photos + lesion counts per m^2 in structured 3-person scout team route: COLDSPOTS first → NEUTRAL → HOTSPOTS last to avoid mechanical spore transfer. Preserve leaf samples in paper bags at 4C; send 20-lesion composite to diagnostic lab for species-level ID and fungicide resistance baseline."
         },
         "confidence_notes":
-            "DETERMINISTIC RULE-BASED EXPERT SYSTEM OUTPUT (builtin_v1). NOTES: (1) Pathogen detector is UNSUPERVISED color-anomaly based — lesion classes are INFERRED from HSV/LAB color profiles, not laboratory confirmed; (2) Weather data is either Open-Meteo historical API or representative late-monsoon regional fallback for Korba CG; (3) Getis-Ord Gi* statistics are computed on GPS-centroid weighted graph with 9 zones (low DoF) hence hotspot labels are directional guidance, not formal statistical significance at alpha=0.05; (4) Prescriptions reference product CLASSES and relative rates per MoA, not proprietary brand names or final adjuvanted tank-mixes; consult local certified agronomist before application; (5) Configure OpenAI API key (Settings > AI Providers) to enable LLM-enriched scenario analysis automatically on next run."
+            "DETERMINISTIC RULE-BASED EXPERT SYSTEM OUTPUT (builtin_v1). NOTES: (1) Pathogen detector is UNSUPERVISED color-anomaly based — lesion classes are INFERRED from HSV/LAB color profiles, not laboratory confirmed; (2) Weather data is either Open-Meteo historical API or representative late-monsoon regional fallback for Korba CG; (3) Getis-Ord Gi* statistics are computed on GPS-centroid weighted graph with 9 zones (low DoF) hence hotspot labels are directional guidance, not formal statistical significance at alpha=0.05; (4) Prescriptions reference product CLASSES and relative rates per MoA, not proprietary brand names or final adjuvanted tank-mixes; consult local certified agronomist before application; (5) Configure GROQ_API_KEY or OPENAI_API_KEY in .env to enable LLM-enriched scenario analysis automatically on next run."
     }
 
 if __name__ == "__main__":

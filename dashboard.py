@@ -17,6 +17,184 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# ── Clean Minimal CSS ─────────────────────────────────────────────────────────
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Base */
+html, body, [class*="css"] { font-family: 'Inter', sans-serif !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #111418; }
+::-webkit-scrollbar-thumb { background: #2D3748; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #4ADE80; }
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #0D1117 !important;
+    border-right: 1px solid #1E2530 !important;
+}
+[data-testid="stSidebar"] .stRadio > div { gap: 2px; }
+[data-testid="stSidebar"] .stRadio label {
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    transition: background 0.15s;
+    font-size: 0.875rem !important;
+    color: #94A3B8 !important;
+}
+[data-testid="stSidebar"] .stRadio label:hover { background: #1A2133 !important; }
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p { color: #475569 !important; font-size: 0.78rem !important; }
+
+/* Page title */
+h1 {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    color: #F1F5F9 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 0.25rem !important;
+}
+h2 { font-size: 1.2rem !important; font-weight: 600 !important; color: #CBD5E1 !important; }
+h3 { font-size: 1rem !important; font-weight: 600 !important; color: #94A3B8 !important; }
+
+/* Metric cards */
+[data-testid="metric-container"] {
+    background: #131920 !important;
+    border: 1px solid #1E2D3D !important;
+    border-radius: 10px !important;
+    padding: 16px 18px !important;
+    transition: border-color 0.2s;
+}
+[data-testid="metric-container"]:hover { border-color: #2D4A6A !important; }
+[data-testid="metric-container"] [data-testid="stMetricLabel"] {
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #4B6478 !important;
+}
+[data-testid="metric-container"] [data-testid="stMetricValue"] {
+    font-size: 1.55rem !important;
+    font-weight: 600 !important;
+    color: #E2E8F0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    letter-spacing: -0.5px !important;
+}
+[data-testid="metric-container"] [data-testid="stMetricDelta"] {
+    font-size: 0.78rem !important;
+    color: #4ADE80 !important;
+}
+
+/* Bordered containers */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: #131920 !important;
+    border: 1px solid #1E2D3D !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+/* Tabs */
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    background: #0D1117 !important;
+    border: 1px solid #1E2530 !important;
+    border-radius: 8px !important;
+    padding: 3px !important;
+    gap: 2px !important;
+}
+[data-testid="stTabs"] [data-baseweb="tab"] {
+    border-radius: 6px !important;
+    font-size: 0.83rem !important;
+    font-weight: 500 !important;
+    color: #4B6478 !important;
+    transition: all 0.15s !important;
+}
+[data-testid="stTabs"] [aria-selected="true"] {
+    background: #1A2B3C !important;
+    color: #CBD5E1 !important;
+    font-weight: 600 !important;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 8px !important;
+    border-left-width: 3px !important;
+    font-size: 0.875rem !important;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    border: 1px solid #1E2530 !important;
+    border-radius: 8px !important;
+    background: #0D1117 !important;
+}
+[data-testid="stExpander"] summary {
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+    color: #94A3B8 !important;
+}
+
+/* DataFrames */
+[data-testid="stDataFrame"] {
+    border-radius: 8px !important;
+    border: 1px solid #1E2530 !important;
+    overflow: hidden !important;
+}
+
+/* Buttons */
+[data-testid="stDownloadButton"] button {
+    background: #1A2B3C !important;
+    color: #CBD5E1 !important;
+    border: 1px solid #2D4A6A !important;
+    border-radius: 8px !important;
+    font-size: 0.83rem !important;
+    font-weight: 500 !important;
+    transition: all 0.15s !important;
+}
+[data-testid="stDownloadButton"] button:hover {
+    background: #1E3448 !important;
+    border-color: #4ADE80 !important;
+    color: #4ADE80 !important;
+}
+
+/* Progress */
+[data-testid="stProgressBar"] > div > div {
+    background: #4ADE80 !important;
+    border-radius: 4px !important;
+}
+
+/* Divider */
+hr { border-color: #1E2530 !important; margin: 1.25rem 0 !important; }
+
+/* Caption */
+[data-testid="stCaptionContainer"] { color: #384B60 !important; font-size: 0.76rem !important; }
+
+/* Select */
+[data-baseweb="select"] > div { border-color: #1E2D3D !important; background: #131920 !important; border-radius: 8px !important; }
+</style>
+""", unsafe_allow_html=True)
+
+
+def _plotly_layout(fig, **extra):
+    base = dict(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#0D1117",
+        font=dict(family="Inter, sans-serif", color="#64748B", size=11),
+        title_font=dict(family="Inter, sans-serif", color="#94A3B8", size=13),
+        legend=dict(bgcolor="#131920", bordercolor="#1E2530", borderwidth=1, font=dict(color="#64748B")),
+        margin=dict(l=8, r=8, t=44, b=8),
+        xaxis=dict(gridcolor="#161E2A", zerolinecolor="#161E2A", tickfont=dict(color="#475569")),
+        yaxis=dict(gridcolor="#161E2A", zerolinecolor="#161E2A", tickfont=dict(color="#475569")),
+    )
+    fig.update_layout(**{**base, **extra})
+    return fig
+
+
+def _badge(text, color="#4ADE80"):
+    return (f"<span style='background:{color}18;color:{color};border:1px solid {color}35;"
+            f"border-radius:5px;padding:2px 9px;font-size:0.76rem;font-weight:600;"
+            f"font-family:JetBrains Mono,monospace;letter-spacing:0.02em'>{text}</span>")
+
 CLASS_HEX = {
     "HOTSPOT_HIGH": "#DC1414",
     "HOTSPOT_MODERATE": "#FF7828",
@@ -24,8 +202,8 @@ CLASS_HEX = {
     "COLDSPOT_MODERATE": "#50BEE6",
     "NEUTRAL": "#8CAA8C",
 }
-SEV_HEX = {"HEALTHY": "#2EBD32", "MILD_STRESS": "#2BDBFF", "MODERATE_STRESS": "#2080FF", "SEVERE_STRESS": "#2020DC"}
-PATHO_HEX = {"Rust_Lesion": "#DC283C", "LeafSpot_Brown": "#965A28", "Chlorosis_Yellow": "#FFDC1E", "General_Lesion": "#B450C8"}
+SEV_HEX = {"HEALTHY": "#4ADE80", "MILD_STRESS": "#38BDF8", "MODERATE_STRESS": "#F59E0B", "SEVERE_STRESS": "#F87171"}
+PATHO_HEX = {"Rust_Lesion": "#F87171", "LeafSpot_Brown": "#D97706", "Chlorosis_Yellow": "#FBBF24", "General_Lesion": "#A78BFA"}
 
 
 @st.cache_data(ttl=300)
@@ -59,8 +237,16 @@ scenario_report = load_json("metadata/scenario_analysis_report.json")
 zone_manifest = load_json("metadata/zone_manifest.json")
 
 with st.sidebar:
-    st.title("🛰️ AgriDrone Digital Twin")
-    st.caption("Drone orthomosaic → micro-zones → health → pathogens → weather → spatial epidemiology → GenAI advisory")
+    st.markdown("""
+    <div style='padding:20px 4px 12px 4px'>
+        <div style='display:flex;align-items:center;gap:10px;margin-bottom:6px'>
+            <span style='font-size:1.5rem'>🛰️</span>
+            <span style='font-weight:700;font-size:0.95rem;color:#E2E8F0;letter-spacing:-0.3px'>AgriDrone Digital Twin</span>
+        </div>
+        <div style='font-size:0.72rem;color:#334155;line-height:1.5'>Drone orthomosaic → micro-zones → health → pathogens → weather → epidemiology → GenAI</div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("<div style='height:1px;background:#1E2530;margin:0 0 12px 0'></div>", unsafe_allow_html=True)
     page = st.radio(
         "Navigation",
         [
@@ -74,7 +260,7 @@ with st.sidebar:
         ],
     )
     if artifact_index:
-        st.divider()
+        st.markdown("<div style='height:1px;background:#1E2530;margin:12px 0'></div>", unsafe_allow_html=True)
         st.metric("Pipeline version", artifact_index.get("pipeline_version", "?"))
         gps = artifact_index.get("gps_center") or {}
         st.caption(f"Field center: {gps.get('lat', '?'):.5f}N, {gps.get('lon', '?'):.5f}E" if gps else "")
@@ -84,13 +270,32 @@ with st.sidebar:
             gs = scenario_report.get("genai_status", {})
             st.info(f"Scenario engine: **{gs.get('source')}**\n\nModel: `{gs.get('model')}`", icon="🤖")
 
-st.title({"1️⃣ Field Overview": "🗺️ Field Digital Twin - Overview",
-          "2️⃣ Weather @ Capture Time": "🌦️ Local Weather at Capture Time",
-          "3️⃣ Zone Inspector": "🔍 Micro-Zone Inspector",
-          "4️⃣ Plant Health Analytics": "🌿 Plant Health Analytics",
-          "5️⃣ Pathogen Detections": "🦠 Pathogen Detection Results",
-          "6️⃣ Hotspot / Coldspot Map": "📍 Spatial Epidemiology - Hotspots & Coldspots",
-          "7️⃣ FULL SCENARIO ANALYSIS": "🧠 Full Scenario Analysis & Advisory"}[page])
+_PAGE_TITLES = {
+    "1️⃣ Field Overview": "Field Digital Twin",
+    "2️⃣ Weather @ Capture Time": "Weather at Capture Time",
+    "3️⃣ Zone Inspector": "Micro-Zone Inspector",
+    "4️⃣ Plant Health Analytics": "Plant Health Analytics",
+    "5️⃣ Pathogen Detections": "Pathogen Detection Results",
+    "6️⃣ Hotspot / Coldspot Map": "Spatial Epidemiology",
+    "7️⃣ FULL SCENARIO ANALYSIS": "Full Scenario Analysis & Advisory",
+}
+_PAGE_ICONS = {
+    "1️⃣ Field Overview": "🗺️",
+    "2️⃣ Weather @ Capture Time": "🌦️",
+    "3️⃣ Zone Inspector": "🔍",
+    "4️⃣ Plant Health Analytics": "🌿",
+    "5️⃣ Pathogen Detections": "🦠",
+    "6️⃣ Hotspot / Coldspot Map": "📍",
+    "7️⃣ FULL SCENARIO ANALYSIS": "🧠",
+}
+st.markdown(
+    f"<div style='margin-bottom:1.5rem'>"
+    f"<div style='font-size:0.75rem;color:#334155;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px'>{_PAGE_ICONS[page]} {page.split(' ', 1)[0].replace('️⃣','').strip()}</div>"
+    f"<h1 style='margin:0;padding:0'>{_PAGE_TITLES[page]}</h1>"
+    f"<div style='height:2px;background:#1E2530;margin-top:12px;border-radius:1px'></div>"
+    f"</div>",
+    unsafe_allow_html=True,
+)
 
 if page == "1️⃣ Field Overview":
     c1, c2, c3, c4 = st.columns(4)
@@ -119,16 +324,29 @@ if page == "1️⃣ Field Overview":
             else:
                 st.warning(f"Missing: {ov.get(key)}")
 
+    st.divider()
     st.subheader("📦 Output catalog")
     cc1, cc2 = st.columns([1, 2])
     with cc1:
-        st.write(f"- Stitching stage images: **{len(artifact_index.get('stitching_stages', []))}**")
-        st.write(f"- Micro-zone crops: **{len(list((BASE / 'micro_zones').glob('*.jpg')))}**")
-        st.write(f"- Health heatmap renders: **{len(list((BASE / 'health_heatmaps').glob('*.jpg')))}**")
         det_n = len(list((BASE / 'detections').rglob('*.jpg')))
-        st.write(f"- Pathogen diagnostics: **{det_n}**")
         sp_n = len(list((BASE / 'epidemiology' / 'zone_spread_heatmaps').glob('*.jpg'))) if (BASE / 'epidemiology').exists() else 0
-        st.write(f"- Spread-risk renders: **{sp_n}**")
+        _catalog_items = [
+            ("Stitching stage images", len(artifact_index.get('stitching_stages', []))),
+            ("Micro-zone crops", len(list((BASE / 'micro_zones').glob('*.jpg')))),
+            ("Health heatmap renders", len(list((BASE / 'health_heatmaps').glob('*.jpg')))),
+            ("Pathogen diagnostics", det_n),
+            ("Spread-risk renders", sp_n),
+        ]
+        for _lbl, _val in _catalog_items:
+            st.markdown(
+                f"<div style='display:flex;justify-content:space-between;align-items:center;"
+                f"padding:9px 14px;margin-bottom:5px;background:#0D1117;"
+                f"border-radius:7px;border:1px solid #1E2530'>"
+                f"<span style='color:#475569;font-size:0.83rem'>{_lbl}</span>"
+                f"<span style='color:#CBD5E1;font-weight:600;font-family:JetBrains Mono,monospace;font-size:0.83rem'>{_val}</span>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
     with cc2:
         mf = artifact_index.get("metadata_files", {})
         st.dataframe(pd.DataFrame({"report": list(mf.keys()), "path": list(mf.values())}), width='stretch', hide_index=True)
@@ -154,9 +372,19 @@ elif page == "2️⃣ Weather @ Capture Time":
     st.subheader("⚠️ Inferred agro-meteorological risk flags")
     f1, f2, f3, f4 = st.columns(4)
     def flag(col, label, val, why):
-        col.markdown(f"**{label}**")
-        (col.success if val else col.error)("ACTIVE" if val else "not active")
-        col.caption(why)
+        _color = "#4ADE80" if val else "#F87171"
+        _bg    = "#0D1A12" if val else "#1A0D0D"
+        _status = "Active" if val else "Inactive"
+        col.markdown(
+            f"<div style='background:{_bg};border:1px solid #1E2530;"
+            f"border-left:3px solid {_color};"
+            f"border-radius:8px;padding:14px 16px;height:100%'>"
+            f"<div style='font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#334155;margin-bottom:6px'>{label}</div>"
+            f"<div style='font-size:1.1rem;font-weight:700;color:{_color};margin-bottom:8px'>{_status}</div>"
+            f"<div style='color:#334155;font-size:0.74rem;line-height:1.5'>{why}</div>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
     flag(f1, "High leaf-wetness risk", agro.get("high_leaf_wetness_risk"), "RH ≥85% or 7-day rain ≥25 mm → long nightly infection windows")
     flag(f2, "Favorable rust conditions", agro.get("favorable_rust_conditions"), "Wetness + temp 18–28 °C range")
     flag(f3, "Favorable leaf-spot conditions", agro.get("favorable_leafspot_conditions"), "Wetness + temp 25–35 °C range (Bipolaris/Cercospora optimum)")
@@ -184,18 +412,18 @@ elif page == "2️⃣ Weather @ Capture Time":
         if ddf.empty:
             ddf = hourly.tail(24)
         fig = make_subplots(specs=[[{"secondary_y": True}]])
-        fig.add_trace(go.Scatter(x=ddf["time"], y=ddf["temp_c"], name="Temperature °C", line=dict(color="#EF553B", width=3)), secondary_y=False)
-        fig.add_trace(go.Scatter(x=ddf["time"], y=ddf["humidity_pct"], name="Humidity %", line=dict(color="#636EFA", width=3, dash="dot")), secondary_y=True)
-        fig.add_trace(go.Bar(x=ddf["time"], y=ddf["precipitation_mm"], name="Rain mm", marker_color="#33A1FF", opacity=0.4), secondary_y=False)
+        fig.add_trace(go.Scatter(x=ddf["time"], y=ddf["temp_c"], name="Temperature °C", line=dict(color="#EF553B", width=2.5)), secondary_y=False)
+        fig.add_trace(go.Scatter(x=ddf["time"], y=ddf["humidity_pct"], name="Humidity %", line=dict(color="#636EFA", width=2.5, dash="dot")), secondary_y=True)
+        fig.add_trace(go.Bar(x=ddf["time"], y=ddf["precipitation_mm"], name="Rain mm", marker_color="#00BFFF", opacity=0.35), secondary_y=False)
         if "soil_moisture_pct" in ddf.columns and ddf["soil_moisture_pct"].notna().any():
             fig.add_trace(go.Scatter(x=ddf["time"], y=ddf["soil_moisture_pct"], name="Soil moisture %", line=dict(color="#8B5E3C", width=2)), secondary_y=True)
         if capture_hour is not None:
             tcut = ddf["time"].iloc[0].normalize() + pd.Timedelta(hours=capture_hour)
-            fig.add_vline(x=tcut.timestamp() * 1000, line=dict(color="#22C55E", width=2, dash="dash"),
+            fig.add_vline(x=tcut.timestamp() * 1000, line=dict(color="#00E5A0", width=2, dash="dash"),
                           annotation_text=f"UAV survey {capture_hour}:00 IST", annotation_position="top")
-        fig.update_layout(height=420, legend=dict(orientation="h", y=1.12), margin=dict(l=10, r=10, t=30, b=10))
-        fig.update_yaxes(title_text="°C / mm", secondary_y=False)
-        fig.update_yaxes(title_text="% RH / soil", secondary_y=True)
+        _plotly_layout(fig, height=420, legend=dict(orientation="h", y=1.12, bgcolor="rgba(8,13,20,0.6)"))
+        fig.update_yaxes(title_text="°C / mm", secondary_y=False, gridcolor="rgba(255,255,255,0.05)")
+        fig.update_yaxes(title_text="% RH / soil", secondary_y=True, gridcolor="rgba(255,255,255,0.05)")
         st.plotly_chart(fig, width='stretch')
 
         with st.expander("Previous 7 days aggregation"):
@@ -227,7 +455,9 @@ elif page == "3️⃣ Zone Inspector":
         b.metric("Anomaly coverage", f"{pz['zone_coverage_pct']:.2f}%")
     if ez:
         c.metric("Spread risk", f"{ez['spread_risk_index']:.3f}")
-        c.metric("Hotspot class", ez["hotspot_class"])
+        _hcls = ez["hotspot_class"]
+        _hcolor = CLASS_HEX.get(_hcls, "#888")
+        c.markdown(_badge(_hcls, _hcolor), unsafe_allow_html=True)
         c.caption(f"Gi* z = {ez['getis_ord_gistar_z']:+.3f}")
 
     t = st.tabs(["Zone crop", "Health heatmap", "Detection result", "Spread risk"])
@@ -276,21 +506,23 @@ elif page == "4️⃣ Plant Health Analytics":
         fig = px.bar(df.sort_values("zone_id"), x="zone_id", y="composite_score", color="severity_label",
                      color_discrete_map=SEV_HEX, title="Per-zone composite health score (higher = healthier)")
         for thr, nm in [(0.42, "SEVERE"), (0.60, "MODERATE"), (0.78, "HEALTHY")]:
-            fig.add_hline(y=thr, line_dash="dot", annotation_text=f"{nm} ≥{thr}")
-        fig.update_layout(height=380)
+            fig.add_hline(y=thr, line_dash="dot", line_color="rgba(255,255,255,0.25)",
+                          annotation_text=f"{nm} ≥{thr}", annotation_font_color="#A8C5DA")
+        _plotly_layout(fig, height=380)
         st.plotly_chart(fig, width='stretch')
     with r:
         dist = fs["severity_distribution"]
         figp = px.pie(names=list(dist.keys()), values=list(dist.values()), title="Severity class distribution",
-                      color_discrete_map=SEV_HEX)
-        figp.update_layout(height=380)
+                      color_discrete_map=SEV_HEX, hole=0.4)
+        figp.update_traces(textfont_color="#DCE8F5")
+        _plotly_layout(figp, height=380)
         st.plotly_chart(figp, width='stretch')
 
     st.subheader("Stress vs vegetation pixel share")
     fig2 = go.Figure()
-    fig2.add_bar(x=df["zone_id"], y=df["stress_pixels_pct"], name="Stress pixels % (<0.60)", marker_color="#EF553B")
-    fig2.add_bar(x=df["zone_id"], y=df["vegetation_pixels_pct"], name="Vegetation pixels % (≥0.50)", marker_color="#2EBD32")
-    fig2.update_layout(barmode="group", height=340)
+    fig2.add_bar(x=df["zone_id"], y=df["stress_pixels_pct"], name="Stress pixels % (<0.60)", marker_color="#EF553B", marker_line_width=0)
+    fig2.add_bar(x=df["zone_id"], y=df["vegetation_pixels_pct"], name="Vegetation pixels % (≥0.50)", marker_color="#00E5A0", marker_line_width=0)
+    _plotly_layout(fig2, barmode="group", height=340)
     st.plotly_chart(fig2, width='stretch')
 
     with st.expander("Zone-level table"):
@@ -312,22 +544,25 @@ elif page == "5️⃣ Pathogen Detections":
         fig = px.bar(x=list(cc.keys()), y=list(cc.values()),
                      color=list(cc.keys()), color_discrete_map=PATHO_HEX,
                      title="Detection class distribution", labels={"x": "class", "y": "count"})
-        fig.update_layout(showlegend=False, height=360)
+        fig.update_traces(marker_line_width=0)
+        _plotly_layout(fig, showlegend=False, height=360)
         st.plotly_chart(fig, width='stretch')
     with r:
         sc = ts["severity_counts"]
         order = [s for s in ["HIGH", "MEDIUM", "LOW", "NONE"] if s in sc]
         fig2 = px.pie(values=[sc[s] for s in order], names=order, title="Zone infection severity mix",
-                      color_discrete_sequence=["#DC1414", "#FF7828", "#F5D060", "#77C97F"])
-        fig2.update_layout(height=360)
+                      color_discrete_sequence=["#DC1414", "#FF7828", "#F5D060", "#00E5A0"], hole=0.4)
+        fig2.update_traces(textfont_color="#DCE8F5")
+        _plotly_layout(fig2, height=360)
         st.plotly_chart(fig2, width='stretch')
 
     zs = load_csv("metadata/pathogen_zone_summary.csv")
     if zs is not None:
         fig3 = px.bar(zs.sort_values("zone_id"), x="zone_id", y="zone_coverage_pct", color="pathogen_severity",
-                      color_discrete_map={"HIGH": "#DC1414", "MEDIUM": "#FF7828", "LOW": "#F5D060", "NONE": "#77C97F"},
+                      color_discrete_map={"HIGH": "#DC1414", "MEDIUM": "#FF7828", "LOW": "#F5D060", "NONE": "#00E5A0"},
                       title="Anomaly coverage % per zone")
-        fig3.update_layout(height=340)
+        fig3.update_traces(marker_line_width=0)
+        _plotly_layout(fig3, height=340)
         st.plotly_chart(fig3, width='stretch')
         with st.expander("Zone summary table"):
             st.dataframe(zs, width='stretch', hide_index=True)
@@ -350,8 +585,18 @@ elif page == "6️⃣ Hotspot / Coldspot Map":
     hc = efs["hotspot_counts"]
     chips = st.columns(len(hc))
     for (cls, cnt), col in zip(hc.items(), chips):
-        col.markdown(f"<div style='background:{CLASS_HEX.get(cls,'#888')};color:#fff;border-radius:8px;padding:10px;text-align:center'><b>{cnt}</b><br>{cls}</div>", unsafe_allow_html=True)
+        _c = CLASS_HEX.get(cls, '#888')
+        col.markdown(
+            f"<div style='background:#0D1117;border:1px solid #1E2530;"
+            f"border-top:2px solid {_c};"
+            f"border-radius:8px;padding:14px 12px;text-align:center'>"
+            f"<div style='font-size:1.6rem;font-weight:700;color:{_c};font-family:JetBrains Mono,monospace'>{cnt}</div>"
+            f"<div style='font-size:0.68rem;font-weight:600;margin-top:4px;color:#475569;text-transform:uppercase;letter-spacing:0.05em'>{cls.replace('_',' ')}</div>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
 
+    st.divider()
     p = img(artifact_index.get("orthomosaic_files", {}).get("epidemiology_overlay", ""))
     p and st.image(p, width='stretch', caption="Full-field epidemiology overlay: red/orange = hotspots, blue/yellow = coldspots")
 
@@ -360,12 +605,14 @@ elif page == "6️⃣ Hotspot / Coldspot Map":
         zd = zones_df.sort_values("getis_ord_gistar_z", ascending=False)
         fig = px.bar(zd, x="zone_id", y="getis_ord_gistar_z", color="hotspot_class",
                      color_discrete_map=CLASS_HEX, title="Getis-Ord Gi* z-score per zone (high = disease cluster)")
-        fig.update_layout(height=380)
+        fig.update_traces(marker_line_width=0)
+        _plotly_layout(fig, height=380)
         st.plotly_chart(fig, width='stretch')
     with r:
         fig2 = px.bar(zones_df.sort_values("spread_risk_index"), x="zone_id", y=["spread_risk_index", "neighbor_weighted_severity"],
-                      barmode="group", title="Spread risk vs neighbor severity", color_discrete_sequence=["#EF553B", "#8CAA8C"])
-        fig2.update_layout(height=380)
+                      barmode="group", title="Spread risk vs neighbor severity", color_discrete_sequence=["#EF553B", "#00E5A0"])
+        fig2.update_traces(marker_line_width=0)
+        _plotly_layout(fig2, height=380)
         st.plotly_chart(fig2, width='stretch')
 
     st.subheader("Zone epidemiology table")
@@ -383,13 +630,24 @@ else:
     sa = scenario_report["scenario_analysis"]
     gs = scenario_report.get("genai_status", {})
 
-    if gs.get("source") == "openai":
-        st.success(f"Generated by LLM ({gs.get('model')})", icon="🤖")
+    _src = gs.get("source", "")
+    if _src in ("openai", "groq"):
+        _provider = "Groq" if _src == "groq" else "OpenAI"
+        st.success(f"Generated by {_provider} LLM ({gs.get('model')})", icon="🤖")
+    elif _src == "rule_based_expert_system":
+        st.warning("Deterministic rule-based expert engine used (no LLM key configured). Set `GROQ_API_KEY` or `OPENAI_API_KEY` in .env to auto-upgrade this report via GenAI on the next pipeline run.", icon="🧮")
     else:
-        st.warning("Deterministic rule-based expert engine used (no LLM key configured). Set `OPENAI_API_KEY` env/.env to auto-upgrade this report via GenAI on the next pipeline run.", icon="🧮")
+        st.info(f"Analysis source: {_src or 'unknown'}", icon="ℹ️")
 
-    st.header("📌 Executive Summary")
-    st.info(sa["executive_summary"], icon="📋")
+    st.markdown(
+        f"<div style='background:#0D1117;border:1px solid #1E2530;border-left:3px solid #4ADE80;"
+        f"border-radius:8px;padding:18px 20px;margin:16px 0'>"
+        f"<div style='font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;"
+        f"color:#334155;margin-bottom:10px'>📌 Executive Summary</div>"
+        f"<div style='color:#94A3B8;font-size:0.9rem;line-height:1.7'>{sa['executive_summary']}</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
 
     st.divider()
     st.header("🔥 Hotspot Analysis - why these zones became infected clusters")
@@ -399,11 +657,16 @@ else:
     for d in ha["hotspot_zones_details"]:
         with st.container(border=True):
             m1, m2 = st.columns([1, 3])
-            m1.markdown(f"### {d['zone_id']}")
-            m1.markdown(f"`primary pathogen:` **{d['primary_pathogen']}**")
+            m1.markdown(
+                f"<div style='text-align:center;padding:8px 0'>"
+                f"<div style='font-size:1.6rem;font-weight:700;color:#F87171;font-family:JetBrains Mono,monospace'>{d['zone_id']}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+            m1.markdown(_badge(d['primary_pathogen'], "#F59E0B"), unsafe_allow_html=True)
             m2.markdown(f"**Environmental driver:** {d['environmental_driver']}")
             for ev in d["evidence"]:
-                m2.markdown(f"- 🔸 {ev}")
+                m2.markdown(f"- {ev}")
     st.subheader("Spread mechanisms")
     for s in ha["spread_mechanisms"]:
         st.markdown(f"- 🌬️ {s}")
@@ -415,23 +678,39 @@ else:
     for d in ca["coldspot_zones_details"]:
         with st.container(border=True):
             m1, m2 = st.columns([1, 3])
-            m1.markdown(f"### {d['zone_id']}")
+            m1.markdown(
+                f"<div style='text-align:center;padding:8px 0'>"
+                f"<div style='font-size:1.6rem;font-weight:700;color:#38BDF8;font-family:JetBrains Mono,monospace'>{d['zone_id']}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
             m2.markdown("**Protective factors:**")
             for pf in d["protective_factors"]:
-                m2.markdown(f"- 🛡️ {pf}")
+                m2.markdown(f"- {pf}")
     st.success(f"**Protective lessons:** {ca['protective_lessons']}", icon="🎓")
 
     st.divider()
     st.header("🌦️ Environmental Inferences (weather-linked)")
     ei = sa["environmental_inferences"]
-    icons = {"temperature_effect": "🌡️ Temperature effect", "humidity_leaf_wetness_effect": "💧 Humidity / leaf-wetness effect",
-             "rainfall_effect_7d": "🌧️ 7-day rainfall effect", "wind_dispersal_risk": "🌬️ Wind dispersal risk",
-             "soil_moisture_inference": "🟤 Soil moisture inference"}
-    for k, label in icons.items():
-        if k in ei:
-            with st.container(border=True):
-                st.markdown(f"**{label}**")
-                st.markdown(ei[k])
+    _env_cfg = [
+        ("temperature_effect",          "🌡️", "Temperature effect",           "#EF553B"),
+        ("humidity_leaf_wetness_effect", "💧", "Humidity / leaf-wetness effect","#636EFA"),
+        ("rainfall_effect_7d",           "🌧️", "7-day rainfall effect",         "#00BFFF"),
+        ("wind_dispersal_risk",          "🌬️", "Wind dispersal risk",           "#8CAA8C"),
+        ("soil_moisture_inference",      "🟤", "Soil moisture inference",       "#8B5E3C"),
+    ]
+    _ei_cols = st.columns(2)
+    _ei_items = [(k, ic, lb, cl) for k, ic, lb, cl in _env_cfg if k in ei]
+    for _idx, (k, ic, lb, cl) in enumerate(_ei_items):
+        with _ei_cols[_idx % 2]:
+            st.markdown(
+                f"<div style='background:#0D1117;border:1px solid #1E2530;"
+                f"border-left:2px solid {cl};border-radius:8px;padding:14px 16px;margin-bottom:10px'>"
+                f"<div style='font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#334155;margin-bottom:6px'>{ic} {lb}</div>"
+                f"<div style='color:#64748B;font-size:0.85rem;line-height:1.6'>{ei[k]}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
 
     st.divider()
     st.header("📈 Risk Inferences")
@@ -440,24 +719,37 @@ else:
     r1.error(f"**72-hour outlook**\n\n{ri['short_term_72h_risk']}")
     r2.warning(f"**2-week outlook**\n\n{ri['medium_term_2week_risk']}")
     st.error(f"**Yield risk assessment**\n\n{ri['yield_risk_assessment']}", icon="🌾")
-    st.markdown("**Highest-risk zones (ordered):** " + " → ".join(f"`{z}`" for z in ri["highest_risk_zones_ordered"]))
+    st.markdown(
+        "<span style='font-size:0.78rem;color:#475569;text-transform:uppercase;font-weight:600;letter-spacing:0.06em'>Highest-risk zones</span>  " +
+        " → ".join(
+            f"<span style='background:#1A0D0D;color:#F87171;border:1px solid #2D1515;"
+            f"border-radius:5px;padding:2px 9px;font-family:JetBrains Mono,monospace;font-size:0.83rem;font-weight:600'>{z}</span>"
+            for z in ri["highest_risk_zones_ordered"]
+        ),
+        unsafe_allow_html=True,
+    )
 
     st.divider()
     st.header("✅ Recommended Actions")
     ra = sa["recommended_actions"]
     p1, p2, p3 = st.columns(3)
-    with p1:
-        st.subheader("P1 · within 24h")
-        for a in ra["priority_1_immediate_24h"]:
-            st.markdown(f"- 🔴 {a}")
-    with p2:
-        st.subheader("P2 · 1–3 days")
-        for a in ra["priority_2_shortterm_1_3d"]:
-            st.markdown(f"- 🟠 {a}")
-    with p3:
-        st.subheader("P3 · 1–2 weeks")
-        for a in ra["priority_3_mediumterm_1_2wk"]:
-            st.markdown(f"- 🟡 {a}")
+    _priority_cfg = [
+        (p1, "P1", "within 24h",  ra["priority_1_immediate_24h"],    "#F87171"),
+        (p2, "P2", "1–3 days",    ra["priority_2_shortterm_1_3d"],   "#F59E0B"),
+        (p3, "P3", "1–2 weeks",   ra["priority_3_mediumterm_1_2wk"], "#4ADE80"),
+    ]
+    for _col, _pnum, _ptime, _actions, _color in _priority_cfg:
+        with _col:
+            _col.markdown(
+                f"<div style='margin-bottom:14px'>"
+                f"<span style='background:{_color}18;color:{_color};border:1px solid {_color}35;"
+                f"border-radius:5px;padding:2px 8px;font-size:0.7rem;font-weight:700;font-family:JetBrains Mono,monospace'>{_pnum}</span>"
+                f"<span style='color:#334155;font-size:0.75rem;margin-left:8px'>{_ptime}</span>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+            for _a in _actions:
+                _col.markdown(f"<div style='color:#64748B;font-size:0.83rem;padding:4px 0;border-bottom:1px solid #111418'>— {_a}</div>", unsafe_allow_html=True)
     st.subheader("Zone-specific prescriptions")
     rx = pd.DataFrame(ra["zone_specific_prescriptions"])
     st.dataframe(rx, width='stretch', hide_index=True)
@@ -487,9 +779,15 @@ else:
         st.caption(sa["confidence_notes"])
 
     dl1, dl2, dl3 = st.columns(3)
-    dl1.download_button("Download scenario JSON", json.dumps(scenario_report, indent=2), "scenario_analysis_report.json")
-    dl2.download_button("Download epidemiology JSON", json.dumps(epi_report, indent=2), "epidemiology_report.json")
-    dl3.download_button("Download weather JSON", json.dumps(weather_report, indent=2, default=str), "weather_report.json")
+    dl1.download_button("Download scenario JSON",     json.dumps(scenario_report, indent=2),              "scenario_analysis_report.json")
+    dl2.download_button("Download epidemiology JSON", json.dumps(epi_report, indent=2),                   "epidemiology_report.json")
+    dl3.download_button("Download weather JSON",      json.dumps(weather_report, indent=2, default=str), "weather_report.json")
 
-st.divider()
-st.caption("Smart India Hackathon · UAV crop-health digital twin · stitching → ExG/VARI/NDVIproxy/MGRVI health → HSV/LAB anomaly pathogen detection → Getis-Ord Gi* spatial epidemiology → weather-correlated GenAI advisory")
+st.markdown("<div style='height:1px;background:#1E2530;margin:2rem 0 1rem 0'></div>", unsafe_allow_html=True)
+st.markdown(
+    "<div style='color:#1E2D3D;font-size:0.73rem;text-align:center;padding-bottom:1rem'>"
+    "Smart India Hackathon &nbsp;·&nbsp; UAV crop-health digital twin &nbsp;·&nbsp; "
+    "stitching → ExG/VARI/NDVIproxy/MGRVI → HSV/LAB pathogen detection → Getis-Ord Gi* epidemiology → GenAI advisory"
+    "</div>",
+    unsafe_allow_html=True,
+)

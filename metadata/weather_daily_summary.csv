@@ -1,2 +1,2 @@
 location,capture_date,temp_max_c,temp_min_c,humidity_max_pct,humidity_mean_pct,precip_mm,wind_max_kmh,rain7d_mm,api_success
-"Korba-Chhattisgarh, India (22.42N, 82.04E)",2023-07-09,30.7,23.3,98,85,8.1,16.1,144.0,True
+"Korba-Chhattisgarh, India (22.42N, 82.04E)",2026-08-11,30.6,24.3,99,89,12.4,10.1,112.4,True

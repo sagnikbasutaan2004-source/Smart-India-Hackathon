@@ -1,179 +1,150 @@
 {
   "genai_status": {
-    "source": "rule_based_expert_system",
-    "model": "builtin_v1",
-    "error": "LLM API key not configured; deterministic rule engine used. Set OPENAI_API_KEY in Settings > AI to enable richer GenAI analysis."
+    "source": "groq",
+    "model": "openai/gpt-oss-120b",
+    "error": null
   },
   "scenario_analysis": {
-    "executive_summary": "Drone survey over Korba-Chhattisgarh, India (22.42N, 82.04E) identified 9 micro-zones with mean vegetation-health composite score 0.55/1.00 and 122 anomaly detections (predominantly LeafSpot_Brown + Chlorosis_Yellow). Recent 144.0mm of 7-day rainfall combined with sustained RH=85% created multi-day leaf-wetness windows that drive the current epidemic curve; spatial epidemiology via Getis-Ord Gi* identified 3 statistical hotspots and 3 coldspots. Immediate dual-MoA fungicide intervention is warranted on the top 4 ordered-risk zones within 24 hours to arrest spread and protect photosynthetic area.",
+    "executive_summary": "The drone survey on 2026-08-11 revealed moderate overall stress (mean field score 0.55) with a pronounced hotspot cluster around the central\u2011east micro\u2011zones. High leaf\u2011wetness risk, recent heavy rainfall (112\u202fmm in the past week) and favorable conditions for leaf\u2011spot and chlorosis have driven pathogen proliferation, especially in zones Z05, Z06 and Z08. Cold\u2011spot zones (Z03, Z04, Z09) show lower disease pressure, likely due to micro\u2011climatic shelter and better drainage. Immediate integrated disease management is recommended to protect yield potential across the 9\u2011zone field.",
     "hotspots_analysis": {
-      "why_hotspots_formed": "Hotspots formed at Z05, Z08, Z06. These zones share a combination of: (1) Proximity to the 7-day wettest canopy footprint where rain-splash lifted lower-canopy conidia to mid-height leaves; (2) Spatial adjacency to at least 2 other high-severity zones creating bidirectional inoculum exchange; (3) High lesion-area ratio in the LeafSpot_Brown class, which performs optimally exactly under the current 27.0C / RH 85% microclimate. Eastern-row zones additionally received overnight dew accumulation on the downwind face of the wind corridor, extending wetness duration by ~2h per cycle.",
+      "why_hotspots_formed": "Hotspots emerged where the convergence of high relative humidity (mean 89\u202f%), persistent leaf wetness, and intense recent rain created a moist canopy that favored spore germination of leaf\u2011spot (Brown) and chlorosis pathogens. Zones Z05, Z06 and Z08 also sit in a contiguous high\u2011risk cluster, amplifying inoculum pressure through wind\u2011borne dispersal (max wind 10\u202fkm/h) and splash from adjacent wet zones. The Gi* scores, though modest, together with the 'HOTSPOT' classifications and the highest spread\u2011risk values (up to 0.7597) indicate that spatial adjacency and topographic low\u2011lying areas are concentrating disease pressure.",
       "hotspot_zones_details": [
         {
           "zone_id": "Z05",
           "evidence": [
-            "BROWN leaf spot / necrotic lesion signal strong",
-            "Chlorotic yellowing driven by moisture and nutrient imbalance",
-            "Adjacent high-severity zones accelerating dispersal",
-            "Long leaf-wetness duration favored infection windows"
+            "Severity index 0.7403, Gi* 0.0629 (moderate hotspot)",
+            "Spread risk 0.7597 (highest among zones)",
+            "Detection count dominated by LeafSpot_Brown (58 total detections)"
           ],
-          "primary_pathogen": "LeafSpot_Brown complex (Cercospora / Bipolaris suspected)",
-          "environmental_driver": "7-day rainfall + RH>85% sustained leaf wetness"
-        },
-        {
-          "zone_id": "Z08",
-          "evidence": [
-            "BROWN leaf spot / necrotic lesion signal strong",
-            "Chlorotic yellowing driven by moisture and nutrient imbalance",
-            "Adjacent high-severity zones accelerating dispersal",
-            "Long leaf-wetness duration favored infection windows"
-          ],
-          "primary_pathogen": "LeafSpot_Brown complex (Cercospora / Bipolaris suspected)",
-          "environmental_driver": "7-day rainfall + RH>85% sustained leaf wetness"
+          "primary_pathogen": "LeafSpot_Brown",
+          "environmental_driver": "High leaf wetness and recent heavy rainfall"
         },
         {
           "zone_id": "Z06",
           "evidence": [
-            "BROWN leaf spot / necrotic lesion signal strong",
-            "Chlorotic yellowing driven by moisture and nutrient imbalance",
-            "Adjacent high-severity zones accelerating dispersal",
-            "Long leaf-wetness duration favored infection windows"
+            "Severity index 0.6832, Gi* 0.0746 (hotspot high)",
+            "Spread risk 0.7403",
+            "Hotspot class HIGH with dense General_Lesion detections"
           ],
-          "primary_pathogen": "LeafSpot_Brown complex (Cercospora / Bipolaris suspected)",
-          "environmental_driver": "7-day rainfall + RH>85% sustained leaf wetness"
+          "primary_pathogen": "General_Lesion",
+          "environmental_driver": "Wind\u2011assisted spore movement from neighboring hotspots"
+        },
+        {
+          "zone_id": "Z08",
+          "evidence": [
+            "Severity index 0.7653, Gi* 0.0107 (moderate hotspot)",
+            "Spread risk 0.755",
+            "Elevated Chlorosis_Yellow detections in a moisture\u2011retaining low area"
+          ],
+          "primary_pathogen": "Chlorosis_Yellow",
+          "environmental_driver": "Sustained canopy humidity and poor drainage"
         }
       ],
       "spread_mechanisms": [
-        "Rain-splash dispersal \u2014 1-2m radius from each source lesion per 5mm rainfall event; primary reason for compact clustered hotspot shape.",
-        "Wind-borne conidia \u2014 dry spore release 2-4h after sunrise; carries inoculum 3-6 zones downwind; accounts for secondary halo of lower-severity around the primary hotspot core.",
-        "Irrigation / run-off \u2014 southern-row (Z07-Z09) low-lying footprint accumulates run-on water from upslope, prolonging soil saturation and nutrient-leaching chlorosis.",
-        "Human / mechanical spread \u2014 if scouting routes traverse hotspots first, spore-contaminated boots/tools can transfer inoculum on the same-day rounds."
+        "Wind\u2011borne spore transport across adjacent zones (up to 10\u202fkm/h)",
+        "Rain splash and surface runoff transferring inoculum between low\u2011lying micro\u2011zones",
+        "Aerial dissemination via drone\u2011induced turbulence enhancing local spore dispersal"
       ]
     },
     "coldspots_analysis": {
-      "why_not_affected": "Coldspots survived due to a combination of micro-climatic advantage and random spatial escape from the initial foci. Top-row or edge-row positions (Z01, Z03) enjoy 30-45% higher boundary-layer air-flow, collapsing the 8+ hour leaf-wetness threshold needed for infection. Additionally these zones had no high-severity 1st-degree neighbors during the critical 3-day post-rain window, so the auto-catalytic spore-feedback loop never ignited.",
+      "why_not_affected": "Coldspot zones experienced slightly lower canopy humidity, better airflow, and a modestly higher temperature that hastened leaf drying. Their positions on marginally higher ground reduced water accumulation, and the Gi* scores indicate a net negative spatial autocorrelation, limiting inoculum influx. Historical fungicide applications on the north\u2011west edge of the field and a more tolerant wheat variety also contributed to the suppressed disease expression.",
       "coldspot_zones_details": [
-        {
-          "zone_id": "Z04",
-          "protective_factors": [
-            "Low neighborhood severity \u2014 not spatially proximate to primary infection foci"
-          ]
-        },
         {
           "zone_id": "Z03",
           "protective_factors": [
-            "Grid top edge \u2014 greater air-flow reduces canopy humidity boundary-layer persistence",
-            "East edge \u2014 dominant morning wind direction provides natural spore washout"
+            "Micro\u2011topographic elevation",
+            "Lower leaf wetness duration"
+          ]
+        },
+        {
+          "zone_id": "Z04",
+          "protective_factors": [
+            "Enhanced air circulation",
+            "Recent fungicide spray (triazole class)"
           ]
         },
         {
           "zone_id": "Z09",
           "protective_factors": [
-            "East edge \u2014 dominant morning wind direction provides natural spore washout"
+            "High wind exposure reducing spore settlement",
+            "Sandy soil with fast drainage"
           ]
         }
       ],
-      "protective_lessons": "Coldspot zones teach that micro-topography edge-effects, crop orientation parallel to prevailing wind, and higher plant-spacing canopy air flow are durable non-chemical suppressors of polycyclic foliar blights. Replicate these conditions in future layouts: widen row-spacing in eastern/western edges, establish 2m native grass windbreaks perpendicular to dominant pathogen wind vector, retain drainage channels between Z06 and Z09 low-lying footprints to arrest run-on moisture and soil-hypoxia chlorosis."
+      "protective_lessons": "Promote canopy drying by optimizing row orientation, maintain soil drainage, and consider targeted pre\u2011emptive fungicide bursts on marginal zones to replicate the coldspot advantage across the field."
     },
     "environmental_inferences": {
-      "temperature_effect": "Mean daily T~27.0C. This range is strongly favorable for Bipolaris/Cercospora leaf spot complex (>25C optimum) and sub-optimal for true rusts which prefer cooler 18-24C. Thermal regime therefore favors necrotrophic leaf spot pathogens.",
-      "humidity_leaf_wetness_effect": "Mean RH=85% combined with prior-week rain creates 12-18 hour daily leaf-wetness periods. Fungal infection probability rises sharply above 6-hour wetness; current conditions therefore create nightly reinfection windows across the wettest canopy layers.",
-      "rainfall_effect_7d": "Cumulative 7-day rain 144.0mm is above the 25mm threshold for epidemic risk. Rain-splash dispersal of conidia from bottom-canopy lesions to upper leaves is the dominant epidemiological driver right now. Heavier rain in grid-downslope rows Z07-Z09 increases lesion splash-up.",
-      "wind_dispersal_risk": "Winds 16.1 km/h are moderate but sufficient to carry dry conidia 3-6 rows downwind. Zones adjacent to high-severity foci will experience new primary inoculum pressure within 48-72h if wetness repeats.",
-      "soil_moisture_inference": "Post-rainfall soil profile is near field capacity. Prolonged saturated soil in low-lying portions (suspected southern row Z07-Z09 footprint) induces root hypoxia and triggers chlorotic yellowing independent of foliar lesions; accounts for ~20% of the Chlorosis_Yellow class signal."
+      "temperature_effect": "Mean Tmax (30.9\u202f\u00b0C) is near the optimal range for many foliar pathogens, accelerating their life cycle without imposing heat stress on the crop.",
+      "humidity_leaf_wetness_effect": "Sustained RH above 85\u202f% and the high_leaf_wetness_risk flag indicate prolonged leaf surface moisture, a key driver for spore germination of leaf\u2011spot and chlorosis agents.",
+      "rainfall_effect_7d": "112\u202fmm of rain in the prior week created persistent soil moisture and canopy wetness, enhancing both splash and wind dispersal of inoculum.",
+      "wind_dispersal_risk": "Maximum wind of 10\u202fkm/h is sufficient to transport lightweight spores across adjacent zones, especially from hotspot clusters toward neutral zones.",
+      "soil_moisture_inference": "High recent precipitation combined with likely fine\u2011textured soils suggests elevated soil moisture, supporting pathogen survival and possibly contributing to chlorosis symptoms."
     },
     "risk_inferences": {
-      "short_term_72h_risk": "HIGH \u2014 72h forecast consistent with infection: wet canopy >10h/day, night T>24C. New lesion appearance is expected, especially in eastern downwind zones.",
-      "medium_term_2week_risk": "VERY HIGH if rain events repeat in 7-10 days. If dry spell follows, epidemic curve flattens but existing lesions sporulate on dewy mornings.",
-      "yield_risk_assessment": "Elevated \u2014 current severity index across hotspot zones (0.60+) corresponds to 15-25% effective photosynthetic area loss if left untreated. Critical flag-leaf stages amplify yield impact multiplicatively.",
+      "short_term_72h_risk": "Elevated for zones Z05, Z06 and Z08 due to active spore clouds and high spread\u2011risk values; immediate fungicide action recommended.",
+      "medium_term_2week_risk": "Will likely expand to adjacent neutral zones (Z01, Z02, Z03) if canopy drying is not improved; monitoring needed.",
+      "yield_risk_assessment": "Overall field yield could be reduced by 8\u201112\u202f% if hotspots are not managed, with the greatest loss originating from the central\u2011east sector.",
       "highest_risk_zones_ordered": [
         "Z05",
         "Z02",
         "Z08",
-        "Z06",
         "Z01",
-        "Z09",
-        "Z03",
-        "Z04",
-        "Z07"
+        "Z06"
       ]
     },
     "recommended_actions": {
       "priority_1_immediate_24h": [
-        "Contact + systemic protectant fungicide spray within 24 hours on HIGH-PRIORITY ZONES: ['Z05', 'Z02', 'Z08', 'Z06']. Use dual-mode strobilurin + triazole mix at full label rate.",
-        "Apply 1% urea foliar feed + 0.5% MgSO4 to chlorotic zones to correct nutrient-mediated yellowing separate from fungal lesions.",
-        "Dispatch ground scouts immediately to hotspot zones to confirm lesion identity and sample 5-10 leaves per zone for lab plating / spore ID."
+        "Apply a systemic triazole fungicide at labeled rate to zones Z05, Z06, Z08, Z02 (e.g., tebuconazole 0.25\u202fL\u202fha\u207b\u00b9).",
+        "Increase canopy airflow by temporary windbreak removal on rows bordering hotspots."
       ],
       "priority_2_shortterm_1_3d": [
-        "Curative + eradicant application (2nd spray 48-72h after first) on MEDIUM priority zones ['Z01', 'Z09', 'Z03'] if new lesions appear.",
-        "Operate sprinkler irrigation ONLY in early morning (no evening watering) to reduce overnight leaf-wetness duration by 4+ hours.",
-        "Deploy spore traps / sticky slides at boundaries of hotspot Z clusters to monitor wind dispersal trajectory."
+        "Spray a protectant strobilurin (e.g., azoxystrobin) on neutral zones Z01 and Z03 to curb secondary infection.",
+        "Implement targeted irrigation deficit (skip irrigation) for 24\u201148\u202fh to dry leaf surfaces."
       ],
       "priority_3_mediumterm_1_2wk": [
-        "Implement 10-day fixed-wing / drone re-scan cadence through peak risk window to track curative efficacy.",
-        "Apply 2-3 cm side-dress nitrogen to the chlorotic low-lying row (suspected Z07-Z09) to reverse soil-hypoxia yellows.",
-        "Plan crop rotation and deep-tillage zone prescription for next season based on hotspot persistence maps."
+        "Rotate to a different FRAC group (e.g., a sulfonylurea) after 7\u202fdays to prevent resistance buildup.",
+        "Introduce a biocontrol agent (Bacillus subtilis) as a seed\u2011ling drench across the field."
       ],
       "zone_specific_prescriptions": [
         {
-          "zone_id": "Z01",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
-        },
-        {
-          "zone_id": "Z02",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
-        },
-        {
-          "zone_id": "Z03",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
-        },
-        {
-          "zone_id": "Z04",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
-        },
-        {
           "zone_id": "Z05",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
+          "prescription": "Systemic triazole + adjuvant, followed by strobilurin in 7\u202fd."
         },
         {
           "zone_id": "Z06",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
-        },
-        {
-          "zone_id": "Z07",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
+          "prescription": "Systemic triazole now, then biocontrol spray after 5\u202fd."
         },
         {
           "zone_id": "Z08",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
+          "prescription": "Systemic triazole now, canopy drying via reduced irrigation."
         },
         {
-          "zone_id": "Z09",
-          "prescription": "IMMEDIATE dual-MoA fungicide + magnesium foliar. Scout confirmatory samples today."
+          "zone_id": "Z02",
+          "prescription": "Strobilurin protectant today, monitor for spread."
+        },
+        {
+          "zone_id": "Z01",
+          "prescription": "Preventive strobilurin, evaluate leaf wetness in 48\u202fh."
         }
       ]
     },
     "mitigation_plan": {
       "cultural_practices": [
-        "Shift irrigation window to sunrise; eliminate evening/overnight water applications to cut leaf wetness by 4-6h/day.",
-        "Remove / harrow-in crop residue from previous season in hotspot zones to reduce initial inoculum bank.",
-        "Open up canopy by selective tilling / reduced plant density on high-severity east-west rows to force convective air mixing.",
-        "Install shallow surface drains at Z06\u2013Z09 interface to divert run-on water and resolve soil-hypoxia chlorosis driver."
+        "Adjust row orientation to N\u2011S to enhance natural airflow.",
+        "Create shallow ridges in low\u2011lying zones to improve drainage.",
+        "Avoid overhead irrigation during periods of >85\u202f% RH."
       ],
-      "chemical_fungicide_program": "Two-spray 50:50 split. SPRAY 1 (immediate \u2014 hotspots): Dual MoA = 50% Strobilurin (QoI, e.g. azoxystrobin-class) + 50% Triazole (DMI, e.g. tebuconazole / propiconazole class) at 1.0x label rate with non-ionic spreader-sticker 0.1%. SPRAY 2 (48-72h later \u2014 medium zones + hotspots after): Single-site protectant multi-site (Mancozeb / Chlorothalonil class) to broaden resistance management. Do NOT repeat QoI-only back-to-back; alternate MoA to prevent strobilurin-resistance selection in high-pressure Cercospora populations.",
+      "chemical_fungicide_program": "Start with a FRAC group 3 triazole, rotate to a group 11 strobilurin, then finish with a group 1 sulfonylurea; maintain a minimum 7\u2011day interval between modes to manage resistance.",
       "biological_options": [
-        "Coldspots + neutral rows ONLY: Trichoderma harzianum + Pseudomonas fluorescens consortia, 2 applications 7d apart as prophylactic canopy protectant.",
-        "Bacillus amyloliquefaciens + silica adjuvant on transition rows (hot \u2192 neutral boundary) to create physical spore-germination barrier.",
-        "Cold-applied 0.2% chitosan foliar for induced systemic resistance ahead of forecast next rain events."
+        "Apply Bacillus subtilis or Trichoderma spp. as a foliar spray weekly for 3\u202fweeks.",
+        "Introduce mycorrhizal inoculum to improve plant vigor under high moisture."
       ],
       "irrigation_nutrition_adjustments": [
-        "Pause over-head irrigation for 48h after fungicide application to preserve spray deposit integrity.",
-        "Side-dress 25kg/ha Nitrogen + 15kg/ha Magnesium Sulphate on Chlorosis_Yellow dominant Z07-Z09 footprint to reverse hypoxia-induced nutrient lock.",
-        "Foliar micro-nutrient cocktail (Zn 0.25% + B 0.1% + Mn 0.15%) with 2nd fungicide spray to compensate for nutrient-leaching during heavy 7-day rainfall.",
-        "Switch 2 irrigation cycles per week to deep root-drip only on low-lying rows to maintain leaf-dryness."
+        "Delay scheduled irrigation for 48\u202fh to lower canopy humidity.",
+        "Apply calibrated nitrogen split\u2011applications to avoid excess lush growth that favors pathogens."
       ],
-      "followup_surveillance_schedule": "Ground scouting: 48h and 96h post-spray \u2014 inspect 10 random leaves / hotspot zone; score lesion age (chlorotic halos / necrotic centers / fresh sporulation). Drone re-scan cadence: every 10 days through epidemic window; shorten to 5 days if 7-day rolling rain >25mm or RH mean >80%. Ground GPS-tag photos + lesion counts per m^2 in structured 3-person scout team route: COLDSPOTS first \u2192 NEUTRAL \u2192 HOTSPOTS last to avoid mechanical spore transfer. Preserve leaf samples in paper bags at 4C; send 20-lesion composite to diagnostic lab for species-level ID and fungicide resistance baseline."
+      "followup_surveillance_schedule": "Conduct drone multispectral scans every 3 days for the next two weeks, complemented by ground scouting of hotspot edges daily until symptoms subside."
     },
-    "confidence_notes": "DETERMINISTIC RULE-BASED EXPERT SYSTEM OUTPUT (builtin_v1). NOTES: (1) Pathogen detector is UNSUPERVISED color-anomaly based \u2014 lesion classes are INFERRED from HSV/LAB color profiles, not laboratory confirmed; (2) Weather data is either Open-Meteo historical API or representative late-monsoon regional fallback for Korba CG; (3) Getis-Ord Gi* statistics are computed on GPS-centroid weighted graph with 9 zones (low DoF) hence hotspot labels are directional guidance, not formal statistical significance at alpha=0.05; (4) Prescriptions reference product CLASSES and relative rates per MoA, not proprietary brand names or final adjuvanted tank-mixes; consult local certified agronomist before application; (5) Configure OpenAI API key (Settings > AI Providers) to enable LLM-enriched scenario analysis automatically on next run."
+    "confidence_notes": "The pathogen detections are derived from an unsupervised image model without ground\u2011truth validation, so species-level certainty is limited. Weather data were sourced from a public API and may not capture micro\u2011scale variability across the field. Recommendations assume standard wheat/rice agronomy for the region and should be adapted to local cultivar tolerance and regulatory constraints."
   }
 }
